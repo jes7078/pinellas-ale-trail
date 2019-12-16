@@ -351,38 +351,20 @@ const HomePage = () => {
 	return (
 		<section className="homePage">
 			<Menu />
-			{/* Featured Beer Section */}
-			{/* <section className="homePageFeaturedBeer">
-				<h1 id="featuredBeerTitle">Random Featured Beer</h1>
-				<section className="randomBeerPictureSection">
-					<img id="randomBeerPicture" src={beer[beerNumber].beerUrl} alt="Random Beer" />
-					<img id="randomBeerBreweryPicture" src={beer[beerNumber].breweryUrl} alt="Random Beer Brewery" />
-				</section>
-			</section> */}
-			{/* Featured Style Section			 */}
-			<section className="homePageFeaturedStyle">
-				<h1 id="featuredStyleTitle">Featured Style and Description</h1>
-				<section className="featuredStyleSection">
-					<section className="featuredStylePictureSection">
-						<img id="featuredStyle" src={style[styleNumber].url} alt="Featured Style" />
-						<section id="featuredStyleDescription">
-							<h1 id="styleTitle">{style[styleNumber].style}</h1>
-							<p>{style[styleNumber].description}</p>
-						</section>
-					</section>
-				</section>
+			<h1 id="featuredStyleTitle">Featured Style and Description</h1>
+			<section className="featuredStyleSection">
+				<img id="featuredStyle" src={style[styleNumber].url} alt="Featured Style" />
+				<h1 id="styleTitle">{style[styleNumber].style}</h1>
+				<p id="styleDescription"> {style[styleNumber].description}</p>
 			</section>
-			{/* Breweries with Featured Style */}
-			<section className="featuredStyleBrewery">
-				<h1 id="featuredStyleBreweryTitle">Featured Style Local Beers</h1>
-				<section className="featuredStyleBreweryPictureSection">
-					<img
-						id="featuredStyleBreweryBeerPicture"
-						src={localStyles[localStyleNumber].beerUrl}
-						alt="Local Featured Styled Beer"
-					/>
-				</section>
-				<section className="featuredStylePictureFooter">
+			<h1 id="featuredStyleBreweryTitle">Featured Style Local Beers</h1>
+			<section className="featuredStyleLocalBeersSection">
+				<img
+					id="featuredStyleLocalBeersPicture"
+					src={localStyles[localStyleNumber].beerUrl}
+					alt="Local Featured Styled Beer"
+				/>
+				<section className="featuredStyleLocalBeersFooter">
 					<h1>{localStyles[localStyleNumber].name}</h1>
 					<h1>{localStyles[localStyleNumber].brewery}</h1>
 				</section>

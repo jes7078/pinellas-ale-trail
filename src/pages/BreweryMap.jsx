@@ -19,17 +19,15 @@ const BreweryMap = () => {
 		<section className="Breweries">
 			<Menu />
 			<h1 id="breweriesTitle">Breweries in Dunedin</h1>
-			<section className="breweriesList">
-				<ul>
-					{breweries.map((brewery) => {
-						return (
-							<li>
-								<Link to={`/${brewery.name}`}>{brewery.name}</Link>
-							</li>
-						)
-					})}
-				</ul>
-			</section>
+			<ul>
+				{breweries.map((brewery) => {
+					return (
+						<li>
+							<Link to={`/${brewery.name}`}>{brewery.name}</Link>
+						</li>
+					)
+				})}
+			</ul>
 			<section className="breweriesMap">
 				<img id="MapofBreweries" src="/Images/MapofBreweries.png" alt="Dunedin Brewery Map" />
 			</section>

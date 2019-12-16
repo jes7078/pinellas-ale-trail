@@ -4,48 +4,56 @@
 
 html {
 	height: 100%;
+	width: 100%;
+	background: #fffcf9;
+	margin: 0;
 }
 
 body {
-	margin: 0;
 	min-height: 100%;
-	background: #5eb1bf;
+	min-width: 100%;
+	margin: 0;
+	background: #fffcf9;
 }
 
+.homePage {
+	height: 100%;
+	width: 100%;
+}
 /********************************* Menu */
 
 .menu {
-	border: 2px solid #491e0d;
-	border-radius: 10px;
-	padding: .5rem;
-	/* background-image: url("https://i.kym-cdn.com/photos/images/original/000/897/535/615.gif"); */
-
+	margin: auto;
+	margin-top: .5rem;
 	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
 	color: transparent;
+	border: 10px solid rgba(0, 0, 0, 0.3);
+	border-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500") 25
+		25 round;
 	background-clip: text;
 	text-align: center;
 	background-position: center;
+	width: 80%;
 }
 
 #menuTitle {
 	text-align: center;
 	font-size: 2rem;
-	margin: auto;
+	margin: 0;
 }
 
 .menuLinks ul {
 	list-style: none;
-	display: flex;
+	display: inline-flex;
 	flex-direction: row;
-	padding: 0;
 	margin: 0;
+	padding: 0;
+	justify-content: space-around;
 }
 
 .menuLinks li {
-	padding-left: .5rem;
-	padding-right: .5rem;
-	padding-top: .5rem;
-	margin: auto;
+	margin: 0;
+	padding: 1rem;
 }
 
 .menuLinks a {
@@ -53,46 +61,15 @@ body {
 	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
 	color: transparent;
 	background-clip: text;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	background-position: center;
+	justify-self: center;
 }
-
-/********************************* homepage */
 
 .homePage {
 }
 
-.homePageFeaturedBeer {
-}
-
-#featuredBeerTitle {
-	text-align: center;
-}
-
-.randomBeerPictureSection {
-	display: flex;
-	justify-content: space-around;
-	height: 15rem;
-	width: 100%;
-	margin: auto;
-	object-fit: contain;
-}
-
-#randomBeerPicture {
-	height: 100%;
-	Width: 45%;
-	border: 2px solid #491e0d;
-	border-radius: 10px;
-	object-fit: contain;
-}
-
-#randomBeerBreweryPicture {
-	height: 100%;
-	width: 45%;
-	border: 2px solid #491e0d;
-	border-radius: 10px;
-	object-fit: contain;
-}
+/*-----------Featured Style Section------------------*/
 
 #featuredStyleTitle {
 	text-align: center;
@@ -102,36 +79,48 @@ body {
 	background-position: center;
 }
 
-.featuredStylePictureSection {
+.featuredStyleSection {
 	display: flex;
+	flex-direction: column;
 	margin: auto;
-	justify-content: space-around;
-	height: 15rem;
-	width: 100%;
-	object-fit: contain;
-}
-
-#styleTitle {
-	margin: .25rem;
-	font-size: 1rem;
+	color: black;
+	border: 10px solid rgba(0, 0, 0, 0.3);
+	border-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500") 25
+		25 round;
+	background-clip: text;
+	text-align: center;
+	background-position: center;
+	height: 25rem;
+	width: 80%;
 }
 
 #featuredStyle {
-	width: 45%;
+	width: 96%;
 	height: 15rem;
-	border: 2px solid #491e0d;
-	border-radius: 10px;
 	object-fit: contain;
+	margin: auto;
+	margin-top: .5rem;
 }
 
-#featuredStyleDescription {
-	width: 41%;
-	height: 14rem;
-	border: 2px solid red;
-	border-radius: 10px;
-	padding: 2rem;
-	/* padding: .25rem; */
+#styleTitle {
+	margin: auto;
+	font-size: 2rem;
+	margin-top: .5rem;
+	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
+	color: transparent;
+	background-clip: text;
+	background-position: center;
 }
+
+#styleDescription {
+	height: 75px;
+	width: 96%;
+	margin: auto;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+}
+
+/*-----------Featured Style Local Beers----------------*/
 
 #featuredStyleBreweryTitle {
 	text-align: center;
@@ -141,65 +130,99 @@ body {
 	background-position: center;
 }
 
-.featuredStyleBreweryPictureSection {
-	width: 95%;
-	height: 15rem;
-	border: 2px solid #491e0d;
-	object-fit: contain;
-	margin: auto;
-	border-radius: 10px;
-}
-
-#featuredStyleBreweryBeerPicture {
-	width: 100%;
-	height: 100%;
-	/* height: auto; */
-	object-fit: contain;
-}
-
-.featuredStylePictureFooter {
+.featuredStyleLocalBeersSection {
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
+	margin: auto;
+	color: black;
+	border: 10px solid rgba(0, 0, 0, 0.3);
+	border-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500") 25
+		25 round;
+	text-align: center;
+	background-position: center;
+	height: 25rem;
+	width: 80%;
+}
+
+#featuredStyleLocalBeersPicture {
+	width: 96%;
+	height: 15rem;
+	border-radius: 10px;
+	object-fit: contain;
+	margin-top: .5rem;
+	margin: auto;
+}
+
+.featuredStyleLocalBeersFooter {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 0;
+}
+
+.featuredStyleLocalBeersFooter h1 {
+	margin: auto;
+	font-size: 2rem;
+	margin-top: .5rem;
+	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
+	color: transparent;
+	background-clip: text;
+	background-position: center;
 }
 
 /*******************************Brewery Map Page */
 
-.breweries {
-}
-
 #breweriesTitle {
 	text-align: center;
-	margin: .25rem;
+	font-size: 2rem;
+	margin-top: .5rem;
+	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
+	color: transparent;
+	background-clip: text;
+	background-position: center;
+	margin-bottom: .25rem;
 }
 
-.breweriesList ul {
-	margin: 0;
+.Breweries ul {
+	margin: auto;
 	padding: 0;
+	margin-bottom: .25rem;
 }
 
-.breweriesList li {
-	margin: .25rem;
-	padding: .25rem;
+.Breweries li {
+	margin: .1rem;
+	padding: .1rem;
 	list-style: none;
 	text-align: center;
 }
 
-.breweriesList li a {
-	font-size: 1rem;
+.Breweries li a {
+	font-size: 1.2rem;
 	text-decoration: none;
+	justify-content: center;
+	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
+	color: transparent;
+	background-clip: text;
+	background-position: center;
 }
 
 .breweriesMap {
 	display: flex;
+	border: 10px solid rgba(0, 0, 0, 0.3);
+	border-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500") 25
+		25 round;
+	text-align: center;
+	background-position: center;
+	width: 80%;
+	margin: auto;
+	margin-bottom: .25rem;
 }
 
 #MapofBreweries {
-	width: 95%;
+	width: 100%;
 	margin: auto;
 	margin-top: 0rem;
 	height: 18rem;
-	border: 2px solid #491e0d;
-	border-radius: 10px;
 }
 
 /********************************* Breweries Page */
