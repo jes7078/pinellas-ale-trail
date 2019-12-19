@@ -298,51 +298,45 @@ const Breweries = (props) => {
 		[ beerNumber, beer.length ]
 	)
 
-	//LOCAL BEERS BASED ON FEATURED STYLE FILTER
+	//LOCAL BEERS BASED ON Brewery Name
 	useEffect(
 		() => {
-			const localBeerStyle = beer.filter((beern) => {
-				return beern.brewery === style[styleNumber].brewery
+			const breweryBeer = beer.filter((beers) => {
+				return beers.brewery === props.match.params.name
 			})
 			setLocalStyleNumber(0)
-			if (localBeerStyle[0] !== undefined) {
-				setLocalStyles(localBeerStyle)
+			if (breweryBeer[0] !== undefined) {
+				setLocalStyles(breweryBeer)
 			} else {
 				setLocalStyles(nullStyle)
 			}
 		},
-		[ styleNumber, beer, style, nullStyle ]
+		[ beer, nullStyle, props.match.params.name ]
 	)
 
-	// TIMER FOR LOCAL BEERS BASED ON FEATURED STYLE
-	useEffect(
-		() => {
-			const interval3 = setInterval(() => {
-				if (localStyleNumber >= localStyles.length - 1) {
-					setLocalStyleNumber(0)
-				} else {
-					setLocalStyleNumber((prev) => prev + 1)
-				}
-			}, 1000)
-			return () => {
-				clearInterval(interval3)
-			}
-		},
-		[ localStyleNumber, localStyles.length, localStyles ]
-	)
 	return (
-		<section>
+		<section className="breweries">
 			<Menu />
 			<h1 id="breweryPageTitle">Welcome to {props.match.params.name}</h1>
-
 			{/* Featured Beer Section */}
-			<section className="homePageFeaturedBeer">
+
+			<section className="breweryPageBeer">
 				<h1 id="featuredBeerTitle">Random Featured Beer</h1>
-				<section className="randomBeerPictureSection">
-					<img id="randomBeerPicture" src={beer[beerNumber].beerUrl} alt="Random Beer" />
-					{/* <img id="randomBeerBreweryPicture" src={beer[beerNumber].breweryUrl} alt="Random Beer Brewery" /> */}
+
+				<section className="breweryPagePictureSection">
+					<img id="breweryBeerPicture" src={localStyles[beerNumber].beerUrl} />
 				</section>
-				<h1>footer</h1>
+			</section>
+			{/* Menu Section */}
+			<section className="menuTitle">
+				<h1 id="currentMenuTitle">Current Menu</h1>
+			</section>
+			<section className="beerList">
+				<ul>
+					{localStyles.map((beer) => {
+						return <li>{beer.name}</li>
+					})}
+				</ul>
 			</section>
 		</section>
 	)

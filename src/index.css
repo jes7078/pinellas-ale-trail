@@ -27,9 +27,6 @@ body {
 	margin-top: .5rem;
 	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
 	color: transparent;
-	border: 10px solid rgba(0, 0, 0, 0.3);
-	border-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500") 25
-		25 round;
 	background-clip: text;
 	text-align: center;
 	background-position: center;
@@ -40,6 +37,7 @@ body {
 	text-align: center;
 	font-size: 2rem;
 	margin: 0;
+	font-family: 'Milonga', cursive;
 }
 
 .menuLinks ul {
@@ -54,29 +52,37 @@ body {
 .menuLinks li {
 	margin: 0;
 	padding: 1rem;
+	font-family: 'Milonga', cursive;
 }
 
 .menuLinks a {
 	text-decoration: none;
-	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
-	color: transparent;
-	background-clip: text;
-	font-size: 1.2rem;
+	color: black;
+	font-size: 1rem;
 	background-position: center;
 	justify-self: center;
+	border: 2px solid black;
+	padding: .25rem;
+	background-color: rgb(246, 229, 202);
 }
 
-.homePage {
+.menuLinks a:hover {
+	transition: .8s;
+	background: red;
 }
 
-/*-----------Featured Style Section------------------*/
+/*-----------Home Page Featured Style Section------------------*/
 
 #featuredStyleTitle {
 	text-align: center;
-	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
-	color: transparent;
-	background-clip: text;
-	background-position: center;
+	color: black;
+	font-family: 'Milonga', cursive;
+	padding-bottom: .25rem;
+	border-top: 2.5px solid black;
+	border-bottom: 2.5px solid black;
+	width: 80%;
+	margin: auto;
+	padding: 1rem;
 }
 
 .featuredStyleSection {
@@ -84,21 +90,9 @@ body {
 	flex-direction: column;
 	margin: auto;
 	color: black;
-	border: 10px solid rgba(0, 0, 0, 0.3);
-	border-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500") 25
-		25 round;
-	background-clip: text;
 	text-align: center;
-	background-position: center;
-	height: 25rem;
 	width: 80%;
-}
-
-#featuredStyle {
-	width: 96%;
-	height: 15rem;
-	object-fit: contain;
-	margin: auto;
+	margin-bottom: .5rem;
 	margin-top: .5rem;
 }
 
@@ -106,28 +100,31 @@ body {
 	margin: auto;
 	font-size: 2rem;
 	margin-top: .5rem;
-	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
-	color: transparent;
-	background-clip: text;
-	background-position: center;
+	color: black;
+	font-family: 'Vollkorn', serif;
 }
 
 #styleDescription {
-	height: 75px;
 	width: 96%;
 	margin: auto;
 	margin-top: .5rem;
 	margin-bottom: .5rem;
+	font-family: 'Vollkorn', serif;
+	font-size: 1.2rem;
 }
 
-/*-----------Featured Style Local Beers----------------*/
+/*-----------Home Page Featured Style Local Beers----------------*/
 
 #featuredStyleBreweryTitle {
 	text-align: center;
-	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
-	color: transparent;
-	background-clip: text;
-	background-position: center;
+	color: black;
+	font-family: 'Milonga', cursive;
+	padding-bottom: .25rem;
+	border-top: 2.5px solid black;
+	border-bottom: 2.5px solid black;
+	width: 80%;
+	margin: auto;
+	padding: 1rem;
 }
 
 .featuredStyleLocalBeersSection {
@@ -135,98 +132,165 @@ body {
 	flex-direction: column;
 	margin: auto;
 	color: black;
-	border: 10px solid rgba(0, 0, 0, 0.3);
-	border-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500") 25
-		25 round;
 	text-align: center;
 	background-position: center;
-	height: 25rem;
 	width: 80%;
+	margin-top: 1rem;
 }
 
 #featuredStyleLocalBeersPicture {
 	width: 96%;
-	height: 15rem;
+	height: 20rem;
 	border-radius: 10px;
 	object-fit: contain;
-	margin-top: .5rem;
 	margin: auto;
+	margin-top: 1rem;
 }
 
-.featuredStyleLocalBeersFooter {
+.featuredStyleLocalBeersHeader {
 	display: flex;
-	flex-direction: column;
-	margin: auto;
+	flex-direction: row;
 	padding: 0;
+	justify-content: center;
+	margin-top: .5rem;
+	margin-left: 0;
+	margin-right: 0;
+	width: 96%;
 }
 
-.featuredStyleLocalBeersFooter h1 {
-	margin: auto;
-	font-size: 2rem;
-	margin-top: .5rem;
-	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
-	color: transparent;
-	background-clip: text;
-	background-position: center;
+.featuredStyleLocalBeersHeader h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 1rem;
+	color: black;
+	font-family: 'Vollkorn', serif;
+}
+#featuredBeer {
+	margin-right: .5rem;
+}
+#featuredBrewery {
+	margin-left: .5rem;
 }
 
 /*******************************Brewery Map Page */
 
 #breweriesTitle {
 	text-align: center;
-	font-size: 2rem;
-	margin-top: .5rem;
-	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
-	color: transparent;
-	background-clip: text;
-	background-position: center;
-	margin-bottom: .25rem;
+	color: black;
+	font-family: 'Milonga', cursive;
+	padding-bottom: .25rem;
+	border-top: 2.5px solid black;
+	border-bottom: 2.5px solid black;
+	width: 80%;
+	margin: auto;
+	padding: 1rem;
 }
 
-.Breweries ul {
+.breweryList ul {
 	margin: auto;
 	padding: 0;
-	margin-bottom: .25rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	height: 30rem;
 }
 
-.Breweries li {
-	margin: .1rem;
-	padding: .1rem;
+.breweryList li {
+	margin: .5rem;
+	padding: .5rem;
 	list-style: none;
 	text-align: center;
+	height: 2rem;
 }
 
-.Breweries li a {
+.breweryList li a {
 	font-size: 1.2rem;
 	text-decoration: none;
 	justify-content: center;
-	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
-	color: transparent;
-	background-clip: text;
-	background-position: center;
+	color: black;
+	padding: .25rem;
+	text-align: center;
+	border: 1px solid #fffcf9;
 }
 
-.breweriesMap {
-	display: flex;
-	border: 10px solid rgba(0, 0, 0, 0.3);
-	border-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500") 25
-		25 round;
+.breweryList li a:hover {
+	border: 1px solid black;
+}
+
+.breweryList li a:hover {
+	transition: .8s;
+	background-color: rgb(246, 229, 202);
+}
+
+#mapTitle {
 	text-align: center;
-	background-position: center;
+	color: black;
+	font-family: 'Milonga', cursive;
+	padding-bottom: .25rem;
+	border-top: 2.5px solid black;
+	border-bottom: 2.5px solid black;
 	width: 80%;
 	margin: auto;
-	margin-bottom: .25rem;
+	padding: 1rem;
 }
 
-#MapofBreweries {
-	width: 100%;
-	margin: auto;
-	margin-top: 0rem;
-	height: 18rem;
+#map {
+	margin-top: 1rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	margin-bottom: 2rem;
 }
 
-/********************************* Breweries Page */
+/*------Breweries Page------------*/
 
 #breweryPageTitle {
 	text-align: center;
+	color: black;
+	font-family: 'Milonga', cursive;
+	padding-bottom: .25rem;
+	border-top: 2.5px solid black;
+	border-bottom: 2.5px solid black;
+	width: 80%;
+	margin: auto;
+	padding: 1rem;
+}
+
+.breweryPagePictureSection {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	background-position: center;
+	width: 80%;
+	margin-top: .5rem;
+	margin-bottom: 1rem;
+}
+
+#breweryBeerPicture {
+	width: 96%;
+	height: 20rem;
+	border-radius: 10px;
+	object-fit: contain;
+	margin: auto;
+}
+
+#featuredBeerTitle {
+	padding: 0;
+	margin: 1rem;
+	text-align: center;
+	font-size: 1.2rem;
+	color: black;
+	font-family: 'Vollkorn', serif;
+}
+
+#currentMenuTitle {
+	text-align: center;
+	color: black;
+	font-family: 'Milonga', cursive;
+	padding-bottom: .25rem;
+	border-top: 2.5px solid black;
+	border-bottom: 2.5px solid black;
+	width: 80%;
+	margin: auto;
+	padding: 1rem;
 }

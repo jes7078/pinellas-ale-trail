@@ -18,18 +18,23 @@ const BreweryMap = () => {
 	return (
 		<section className="Breweries">
 			<Menu />
+
 			<h1 id="breweriesTitle">Breweries in Dunedin</h1>
-			<ul>
-				{breweries.map((brewery) => {
-					return (
-						<li>
-							<Link to={`/${brewery.name}`}>{brewery.name}</Link>
-						</li>
-					)
-				})}
-			</ul>
-			<section className="breweriesMap">
-				<img id="MapofBreweries" src="/Images/MapofBreweries.png" alt="Dunedin Brewery Map" />
+
+			<section className="breweryList">
+				<ul>
+					{breweries.map((brewery) => {
+						return (
+							<li>
+								<Link to={`/${brewery.name}`}>{brewery.name}</Link>
+							</li>
+						)
+					})}
+				</ul>
+			</section>
+			<section className="mapSection">
+				<h1 id="mapTitle">Map of Dunedin</h1>
+				<img id="map" src="../Images/MapOfBreweries.png" />
 			</section>
 		</section>
 	)

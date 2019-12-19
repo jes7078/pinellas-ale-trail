@@ -340,7 +340,7 @@ const HomePage = () => {
 				} else {
 					setLocalStyleNumber((prev) => prev + 1)
 				}
-			}, 1000)
+			}, 3000)
 			return () => {
 				clearInterval(interval3)
 			}
@@ -351,23 +351,22 @@ const HomePage = () => {
 	return (
 		<section className="homePage">
 			<Menu />
-			<h1 id="featuredStyleTitle">Featured Style and Description</h1>
+			<h1 id="featuredStyleTitle">Featured Style</h1>
 			<section className="featuredStyleSection">
-				<img id="featuredStyle" src={style[styleNumber].url} alt="Featured Style" />
 				<h1 id="styleTitle">{style[styleNumber].style}</h1>
 				<p id="styleDescription"> {style[styleNumber].description}</p>
 			</section>
 			<h1 id="featuredStyleBreweryTitle">Featured Style Local Beers</h1>
 			<section className="featuredStyleLocalBeersSection">
+				<section className="featuredStyleLocalBeersHeader">
+					<h1 id="featuredBeer">{localStyles[localStyleNumber].name}</h1>
+					<h1 id="featuredBrewery">{localStyles[localStyleNumber].brewery}</h1>
+				</section>
 				<img
 					id="featuredStyleLocalBeersPicture"
 					src={localStyles[localStyleNumber].beerUrl}
 					alt="Local Featured Styled Beer"
 				/>
-				<section className="featuredStyleLocalBeersFooter">
-					<h1>{localStyles[localStyleNumber].name}</h1>
-					<h1>{localStyles[localStyleNumber].brewery}</h1>
-				</section>
 			</section>
 		</section>
 	)
