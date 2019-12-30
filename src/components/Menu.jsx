@@ -14,6 +14,9 @@ const Menu = () => {
 						<li>
 							<Link to="/BreweryMap">Brewery Map</Link>
 						</li>
+						<li>
+							<Link to="/AdminPage">Admin</Link>
+						</li>
 					</ul>
 				</nav>
 			</section>

@@ -284,18 +284,18 @@ const Breweries = (props) => {
 	// TIMER FOR RANDOM FEATURED BEER
 	useEffect(
 		() => {
-			const interval2 = setInterval(() => {
-				if (beerNumber >= beer.length - 1) {
+			const interval1 = setInterval(() => {
+				if (beerNumber >= localStyles.length - 1) {
 					setBeerNumber(0)
 				} else {
 					setBeerNumber((prev) => prev + 1)
 				}
 			}, 5000)
 			return () => {
-				clearInterval(interval2)
+				clearInterval(interval1)
 			}
 		},
-		[ beerNumber, beer.length ]
+		[ beerNumber, localStyles.length ]
 	)
 
 	//LOCAL BEERS BASED ON Brewery Name
@@ -325,18 +325,31 @@ const Breweries = (props) => {
 
 				<section className="breweryPagePictureSection">
 					<img id="breweryBeerPicture" src={localStyles[beerNumber].beerUrl} />
+					<section className="breweryPagePictureFooter">
+						<h1>Name: {localStyles[beerNumber].name}</h1>
+						<h1>Style: {localStyles[beerNumber].style}</h1>
+						<h1>Description: {localStyles[beerNumber].description}</h1>
+						<h1>ABV: {localStyles[beerNumber].abv}</h1>
+					</section>
 				</section>
 			</section>
 			{/* Menu Section */}
 			<section className="menuTitle">
 				<h1 id="currentMenuTitle">Current Menu</h1>
 			</section>
-			<section className="beerList">
-				<ul>
+			<section className="beerListBackground">
+				<section className="beerList">
 					{localStyles.map((beer) => {
-						return <li>{beer.name}</li>
+						return (
+							<ul>
+								<li>{beer.name}</li>
+								<li>{beer.style}</li>
+								<li>{beer.abv}</li>
+								<li>{beer.description}</li>
+							</ul>
+						)
 					})}
-				</ul>
+				</section>
 			</section>
 		</section>
 	)
