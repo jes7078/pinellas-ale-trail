@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Menu from '../components/Menu'
 
 const AdminBeer = () => {
   const [beerList, setBeerList] = useState([])
@@ -15,6 +16,7 @@ const AdminBeer = () => {
 
   return (
     <section>
+      <Menu />
       <h1>Add a Beer Page</h1>
       <h1> Current Beers</h1>
       <ul>
