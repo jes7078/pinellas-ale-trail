@@ -3,7 +3,6 @@ import axios from 'axios'
 import Menu from '../components/Menu'
 
 const DeleteBrewery = () => {
-  let e
   const [breweryList, setBreweryList] = useState([])
 
   const createBreweryList = async () => {
@@ -14,16 +13,6 @@ const DeleteBrewery = () => {
   useEffect(() => {
     createBreweryList()
   }, [])
-
-  const handleClick = eventData => {
-    if (eventData) {
-      const bre = breweryList.filter(br => {
-        return br.id === eventData
-      })
-      let holder = parseInt(bre[0].id)
-      deleteit(holder)
-    }
-  }
 
   const deleteit = async holder => {
     const resp = await axios.delete(
@@ -40,17 +29,17 @@ const DeleteBrewery = () => {
   return (
     <section>
       <Menu />
-      return <h1>Delete a Brewery Page</h1>
+      <h1>Delete a Brewery Page</h1>
       <h1>Current Breweries</h1>
       <ul>
         {breweryList.map((brewery, index) => {
           return (
-            <section>
+            <section key={brewery.id}>
               <li key={index}>{brewery.name}</li>
               <button
                 className="deleteButton"
                 value={brewery.id}
-                onClick={() => handleClick(brewery.id)}
+                onClick={() => deleteit(brewery.id)}
               >
                 Delete
               </button>
