@@ -3,25 +3,39 @@ import axios from 'axios'
 import Menu from '../components/Menu'
 
 const AdminBeer = () => {
+	const [ breweryList, setBreweryList ] = useState([])
 	const [ beerList, setBeerList ] = useState([])
 	const [ beer, setBeer ] = useState({
 		id: 0,
 		name: '',
-		brewery: '',
-		style: '',
 		description: '',
 		beerURL: '',
-		ABV: '',
-		beerStyleId: 0,
-		breweriesid: 0
+		abv: '',
+		beerStyleId: '',
+		breweriesId: ''
 	})
 
 	const updateBeerObject = (e) => {
 		e.persist()
 		setBeer((prevBeer) => ({
 			...prevBeer,
-			[e.target.name]: e.target.value
+			[e.target.name]: e.target.valueAsNumber || e.target.value
 		}))
+	}
+
+	const selectIt = (id) => {
+		const filterBeer = beerList.filter((beer) => {
+			return beer.id === id
+		})
+		setBeer({
+			id: filterBeer[0].id,
+			name: filterBeer[0].name,
+			description: filterBeer[0].description,
+			beerURL: filterBeer[0].beerURL,
+			abv: filterBeer[0].abv,
+			beerStyleId: filterBeer[0].beerStyleId,
+			breweriesId: filterBeer[0].breweriesId
+		})
 	}
 
 	const createBeerList = async () => {
@@ -32,7 +46,7 @@ const AdminBeer = () => {
 	const addIt = async (e) => {
 		e.preventDefault()
 		const resp = await axios.post(`https://localhost:5001/api/Beers`, beer)
-		if (resp.statusText === 'OK') {
+		if (resp.statusText === 'Created') {
 			window.alert('Beer Added')
 		} else {
 			window.alert('Error, Beer Not Added')
@@ -51,8 +65,9 @@ const AdminBeer = () => {
 		createBeerList()
 	}
 
-	const deleteit = async (id) => {
-		const resp = await axios.delete('https://localhost:5001/api/Beers/' + id)
+	const deleteit = async (e, beer) => {
+		e.preventDefault()
+		const resp = await axios.delete('https://localhost:5001/api/Beers/' + beer.id)
 		if (resp.statusText === 'OK') {
 			window.alert('Beer deleted')
 		} else {
@@ -61,25 +76,14 @@ const AdminBeer = () => {
 		createBeerList()
 	}
 
-	const selectIt = (id) => {
-		const filterBeer = beerList.filter((bee) => {
-			return bee.id === id
-		})
-		setBeer({
-			id: filterBeer[0].id,
-			name: filterBeer[0].name,
-			brewery: filterBeer[0].brewery,
-			style: filterBeer[0].style,
-			description: filterBeer[0].description,
-			beerURL: filterBeer[0].beerURL,
-			ABV: filterBeer[0].abv,
-			beerStyleId: filterBeer[0].beerStyleId,
-			breweriesid: filterBeer[0].breweriesId
-		})
+	const createBreweryList = async () => {
+		const resp = await axios.get('https://localhost:5001/api/Breweries')
+		setBreweryList(resp.data)
 	}
 
 	useEffect(() => {
 		createBeerList()
+		createBreweryList()
 	}, [])
 
 	return (
@@ -95,24 +99,6 @@ const AdminBeer = () => {
 						type="text"
 						value={beer.name}
 						placeholder="Enter Beer Name"
-						onChange={updateBeerObject}
-					/>
-					<label>Brewery of Beer</label>
-					<input
-						name="brewery"
-						className="inputBar"
-						type="text"
-						value={beer.brewery}
-						placeholder="Enter Brewery Pic URL"
-						onChange={updateBeerObject}
-					/>
-					<label>Beer Style</label>
-					<input
-						name="style"
-						className="inputBar"
-						type="text"
-						value={beer.style}
-						placeholder="Enter Beer Style"
 						onChange={updateBeerObject}
 					/>
 					<label>Beer Description</label>
@@ -135,13 +121,35 @@ const AdminBeer = () => {
 					/>
 					<label>Beer ABV</label>
 					<input
-						name="ABV"
+						name="abv"
 						className="inputBar"
 						type="text"
 						value={beer.abv}
 						placeholder="Enter beer ABV"
 						onChange={updateBeerObject}
 					/>
+					<label>Beer Style Id of Beer</label>
+					<input
+						name="beerStyleId"
+						className="inputBar"
+						type="number"
+						step="1"
+						value={beer.beerStyleId}
+						placeholder="Enter Beer Style Id"
+						onChange={updateBeerObject}
+					/>
+
+					<label>Brewery Id of Beer</label>
+					<input
+						name="breweriesId"
+						className="inputBar"
+						type="number"
+						step="1"
+						value={beer.breweriesId}
+						placeholder="Enter Brewery Id"
+						onChange={updateBeerObject}
+					/>
+
 					<section className="addBeerButtons">
 						<button className="addButton" onClick={addIt}>
 							Add
@@ -149,7 +157,7 @@ const AdminBeer = () => {
 						<button className="updateButton" onClick={updateIt}>
 							Update
 						</button>
-						<button className="deleteButton" value={beer.id} onClick={() => deleteit(beer.id)}>
+						<button className="deleteButton" onClick={(e) => deleteit(e, beer)}>
 							Delete
 						</button>
 					</section>

@@ -29,7 +29,8 @@ const AddBrewery = () => {
 	const addIt = async (e) => {
 		e.preventDefault()
 		const resp = await axios.post(`https://localhost:5001/api/Breweries`, brewery)
-		if (resp.statusText === 'OK') {
+		console.log(resp.statusText)
+		if (resp.statusText === 'Created') {
 			window.alert('Brewery Added')
 		} else {
 			window.alert('Error, Brewery Not Added')
@@ -48,8 +49,10 @@ const AddBrewery = () => {
 		createBreweryList()
 	}
 
-	const deleteit = async (id) => {
-		const resp = await axios.delete('https://localhost:5001/api/Breweries/' + id)
+	const deleteit = async (e, brewery) => {
+		e.preventDefault()
+		const resp = await axios.delete('https://localhost:5001/api/Breweries/' + brewery.id)
+		console.log(resp.statusText)
 		if (resp.statusText === 'OK') {
 			window.alert('Brewery deleted')
 		} else {
@@ -134,7 +137,7 @@ const AddBrewery = () => {
 						<button className="updateButton" onClick={updateIt}>
 							Update
 						</button>
-						<button className="deleteButton" value={brewery.id} onClick={() => deleteit(brewery.id)}>
+						<button className="deleteButton" onClick={(e) => deleteit(e, brewery)}>
 							Delete
 						</button>
 					</section>

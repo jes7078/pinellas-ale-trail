@@ -27,7 +27,7 @@ const AddStyle = () => {
 	const addIt = async (e) => {
 		e.preventDefault()
 		const resp = await axios.post(`https://localhost:5001/api/BeerStyle`, beerStyle)
-		if (resp.statusText === 'OK') {
+		if (resp.statusText === 'Created') {
 			window.alert('Beer Style Added')
 		} else {
 			window.alert('Error, Beer Style Not Added')
@@ -46,8 +46,9 @@ const AddStyle = () => {
 		createBeerStyleList()
 	}
 
-	const deleteit = async (id) => {
-		const resp = await axios.delete('https://localhost:5001/api/BeerStyle/' + id)
+	const deleteit = async (e, beerStyle) => {
+		e.preventDefault()
+		const resp = await axios.delete('https://localhost:5001/api/BeerStyle/' + beerStyle.id)
 		if (resp.statusText === 'OK') {
 			window.alert('Beer Style deleted')
 		} else {
@@ -112,7 +113,7 @@ const AddStyle = () => {
 						<button className="updateButton" onClick={updateIt}>
 							Update
 						</button>
-						<button className="deleteButton" value={beerStyle.id} onClick={() => deleteit(beerStyle.id)}>
+						<button className="deleteButton" onClick={(e) => deleteit(e, beerStyle)}>
 							Delete
 						</button>
 					</section>
