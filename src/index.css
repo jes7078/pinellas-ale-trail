@@ -527,3 +527,175 @@ body {
 	transition: .8s;
 	background: red;
 }
+
+/*--------Add Update Delete Beer----------------*/
+.addBeerTitle {
+	text-align: center;
+}
+
+.addBeerInputSection form {
+	display: flex;
+	flex-direction: column;
+}
+
+.addBeerInputSection label {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.addBeerInputSection Input {
+	text-align: center;
+	width: 40rem;
+	margin-left: auto;
+	margin-right: auto;
+	height: 2rem;
+	padding: 0;
+}
+
+.addBeerButtons {
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	padding: 0;
+}
+
+.currentBeersTitle {
+	text-align: center;
+}
+
+.addCurrentBeersList {
+	width: 80%;
+	margin: auto;
+}
+.addBeerList {
+	display: flex;
+	flex-direction: row;
+	float: middle;
+	margin-top: 1rem;
+	padding: 0;
+	width: 30rem;
+	margin: auto;
+}
+
+.addBeerList li {
+	margin-right: 2rem;
+	font-size: 1.2rem;
+	border: 2px solid #fffcf9;
+	vertical-align: middle;
+	padding-top: 1rem;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.addCurrentBeersList ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.addBeerList button {
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	width: 8rem;
+	font-family: 'Milonga', cursive;
+	border: 2px solid black;
+	background-color: rgb(246, 229, 202);
+	margin-right: 1rem;
+	margin-left: 7rem;
+	margin-top: 1rem;
+	height: 3rem;
+}
+
+.addBeerList button:hover {
+	transition: .8s;
+	background: red;
+}
+
+/*--------Add Update Delete Style----------------*/
+.addStyleTitle {
+	text-align: center;
+}
+
+.addStyleInputSection form {
+	display: flex;
+	flex-direction: column;
+}
+
+.addStyleInputSection label {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.addStyleInputSection Input {
+	text-align: center;
+	width: 40rem;
+	margin-left: auto;
+	margin-right: auto;
+	height: 2rem;
+	padding: 0;
+}
+
+.addStyleButtons {
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	padding: 0;
+}
+
+.currentStylesTitle {
+	text-align: center;
+}
+
+.addCurrentStylesList {
+	width: 80%;
+	margin: auto;
+}
+.addStyleList {
+	display: flex;
+	flex-direction: row;
+	float: middle;
+	margin-top: 1rem;
+	padding: 0;
+	width: 30rem;
+	margin: auto;
+}
+
+.addStyleList li {
+	margin-right: 2rem;
+	font-size: 1.2rem;
+	border: 2px solid #fffcf9;
+	vertical-align: middle;
+	padding-top: 1rem;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.addCurrentStylesList ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.addStyleList button {
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	width: 8rem;
+	font-family: 'Milonga', cursive;
+	border: 2px solid black;
+	background-color: rgb(246, 229, 202);
+	margin-right: 1rem;
+	margin-left: 7rem;
+	margin-top: 1rem;
+	height: 3rem;
+}
+
+.addStyleList button:hover {
+	transition: .8s;
+	background: red;
+}

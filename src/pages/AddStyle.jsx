@@ -75,8 +75,7 @@ const AddStyle = () => {
 	return (
 		<section>
 			<Menu />
-			<h1>Add a Style Page</h1>
-			<h1>Current Styles</h1>
+			<h1 className="addStyleTitle">Add, Update, or Delete a Style Page</h1>
 			<section className="addStyleInputSection">
 				<form>
 					<label>Enter Style of Beer</label>

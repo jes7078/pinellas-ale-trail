@@ -3,143 +3,175 @@ import axios from 'axios'
 import Menu from '../components/Menu'
 
 const AdminBeer = () => {
-  const [beerList, setBeerList] = useState([])
-  const [beerName, setBeerName] = useState('')
-  const [breweryName, setBreweryName] = useState('')
-  const [beerStyle, setBeerStyle] = useState('')
-  const [beerDescription, setBeerDescription] = useState('')
-  const [beerURL, setBeerURL] = useState('')
-  const [aVB, setAVB] = useState('')
+	const [ beerList, setBeerList ] = useState([])
+	const [ beer, setBeer ] = useState({
+		id: 0,
+		name: '',
+		brewery: '',
+		style: '',
+		description: '',
+		beerURL: '',
+		ABV: '',
+		beerStyleId: 0,
+		breweriesid: 0
+	})
 
-  const enterBeerName = eventData => {
-    if (eventData) {
-      setBeerName(eventData.target.value)
-    }
-  }
+	const updateBeerObject = (e) => {
+		e.persist()
+		setBeer((prevBeer) => ({
+			...prevBeer,
+			[e.target.name]: e.target.value
+		}))
+	}
 
-  const enterBreweryName = eventData => {
-    if (eventData) {
-      setBreweryName(eventData.target.value)
-    }
-  }
+	const createBeerList = async () => {
+		const resp = await axios.get('https://localhost:5001/api/Beers')
+		setBeerList(resp.data)
+	}
 
-  const enterBeerStyle = eventData => {
-    if (eventData) {
-      setBeerStyle(eventData.target.value)
-    }
-  }
+	const addIt = async (e) => {
+		e.preventDefault()
+		const resp = await axios.post(`https://localhost:5001/api/Beers`, beer)
+		if (resp.statusText === 'OK') {
+			window.alert('Beer Added')
+		} else {
+			window.alert('Error, Beer Not Added')
+		}
+		createBeerList()
+	}
 
-  const enterBeerDescription = eventData => {
-    if (eventData) {
-      setBeerDescription(eventData.target.value)
-    }
-  }
+	const updateIt = async (e) => {
+		e.preventDefault()
+		const resp = await axios.put(`https://localhost:5001/api/Beers/` + beer.id, beer)
+		if (resp.statusText === 'OK') {
+			window.alert('Beer Changed')
+		} else {
+			window.alert('Error, beer Not Changed')
+		}
+		createBeerList()
+	}
 
-  const enterBeerURL = eventData => {
-    if (eventData) {
-      setBeerURL(eventData.target.value)
-    }
-  }
+	const deleteit = async (id) => {
+		const resp = await axios.delete('https://localhost:5001/api/Beers/' + id)
+		if (resp.statusText === 'OK') {
+			window.alert('Beer deleted')
+		} else {
+			window.alert('Error, beer Not deleted')
+		}
+		createBeerList()
+	}
 
-  const enterBeerABV = eventData => {
-    if (eventData) {
-      setAVB(eventData.target.value)
-    }
-  }
+	const selectIt = (id) => {
+		const filterBeer = beerList.filter((bee) => {
+			return bee.id === id
+		})
+		setBeer({
+			id: filterBeer[0].id,
+			name: filterBeer[0].name,
+			brewery: filterBeer[0].brewery,
+			style: filterBeer[0].style,
+			description: filterBeer[0].description,
+			beerURL: filterBeer[0].beerURL,
+			ABV: filterBeer[0].abv,
+			beerStyleId: filterBeer[0].beerStyleId,
+			breweriesid: filterBeer[0].breweriesId
+		})
+	}
 
-  const submit = async () => {
-    let beerInfo = {
-      id: 0,
-      name: beerName,
-      brewery: breweryName,
-      style: beerStyle,
-      description: beerDescription,
-      beerurl: beerURL,
-      abv: aVB,
-      beerstyleid: 0,
-      breweriesid: 0,
-    }
-    const resp = await axios.post(`https://localhost:5001/api/Beers`, beerInfo)
-    if (resp.statusText === 'OK') {
-      window.alert('Beer Added')
-    } else {
-      window.alert('Error, beer Not Added')
-    }
-    createBeerList()
-  }
+	useEffect(() => {
+		createBeerList()
+	}, [])
 
-  const createBeerList = async () => {
-    const resp = await axios.get('https://localhost:5001/api/Beers')
-    setBeerList(resp.data)
-  }
-
-  useEffect(() => {
-    createBeerList()
-  }, [])
-
-  return (
-    <section>
-      <Menu />
-      <h1>Add a Beer Page</h1>
-      <label>Enter Name of Beer</label>
-      <input
-        className="inputBar"
-        type="text"
-        value={beerName}
-        placeholder="Beer Name"
-        onChange={enterBeerName}
-      ></input>
-      <label>Enter Name of Brewery</label>
-      <input
-        className="inputBar"
-        type="text"
-        value={breweryName}
-        placeholder="Brewery of Beer"
-        onChange={enterBreweryName}
-      ></input>
-      <label>Enter Style of Beer</label>
-      <input
-        className="inputBar"
-        type="text"
-        value={beerStyle}
-        placeholder="Style of Beer"
-        onChange={enterBeerStyle}
-      ></input>
-      <label>Enter Beer Description</label>
-      <input
-        className="inputBar"
-        type="text"
-        value={beerDescription}
-        placeholder="Style Picture URL"
-        onChange={enterBeerDescription}
-      ></input>
-      <label>Enter Beer URL</label>
-      <input
-        className="inputBar"
-        type="text"
-        value={beerURL}
-        placeholder="Beer URL"
-        onChange={enterBeerURL}
-      ></input>
-      <label>Enter Beer ABV</label>
-      <input
-        className="inputBar"
-        type="text"
-        value={aVB}
-        placeholder="Beer ABV"
-        onChange={enterBeerABV}
-      ></input>
-      <button className="submitButton" onClick={submit}>
-        Submit
-      </button>
-      <h1> Current Beers</h1>
-      <ul>
-        {beerList.map((beer, index) => {
-          return <li key={index}>{beer.name}</li>
-        })}
-      </ul>
-    </section>
-  )
+	return (
+		<section>
+			<Menu />
+			<h1 className="addBeerTitle">Add, Update, or Delete a Beer Page</h1>
+			<section className="addBeerInputSection">
+				<form>
+					<label>Name of Beer</label>
+					<input
+						name="name"
+						className="inputBar"
+						type="text"
+						value={beer.name}
+						placeholder="Enter Beer Name"
+						onChange={updateBeerObject}
+					/>
+					<label>Brewery of Beer</label>
+					<input
+						name="brewery"
+						className="inputBar"
+						type="text"
+						value={beer.brewery}
+						placeholder="Enter Brewery Pic URL"
+						onChange={updateBeerObject}
+					/>
+					<label>Beer Style</label>
+					<input
+						name="style"
+						className="inputBar"
+						type="text"
+						value={beer.style}
+						placeholder="Enter Beer Style"
+						onChange={updateBeerObject}
+					/>
+					<label>Beer Description</label>
+					<input
+						name="description"
+						className="inputBar"
+						type="text"
+						value={beer.description}
+						placeholder="Enter Beer Description"
+						onChange={updateBeerObject}
+					/>
+					<label>Beer Pic URL</label>
+					<input
+						name="beerURL"
+						className="inputBar"
+						type="text"
+						value={beer.beerURL}
+						placeholder="Enter beer picture URL"
+						onChange={updateBeerObject}
+					/>
+					<label>Beer ABV</label>
+					<input
+						name="ABV"
+						className="inputBar"
+						type="text"
+						value={beer.abv}
+						placeholder="Enter beer ABV"
+						onChange={updateBeerObject}
+					/>
+					<section className="addBeerButtons">
+						<button className="addButton" onClick={addIt}>
+							Add
+						</button>
+						<button className="updateButton" onClick={updateIt}>
+							Update
+						</button>
+						<button className="deleteButton" value={beer.id} onClick={() => deleteit(beer.id)}>
+							Delete
+						</button>
+					</section>
+				</form>
+			</section>
+			<h1 className="currentBeersTitle">Current Beers</h1>
+			<section className="addCurrentBeersList">
+				<ul>
+					{beerList.map((bee, index) => {
+						return (
+							<section key={index} className="addBeerList">
+								<button value={bee.id} onClick={() => selectIt(bee.id)}>
+									Select for Update or Delete
+								</button>
+								<li key={index}>{bee.name}</li>
+							</section>
+						)
+					})}
+				</ul>
+			</section>
+		</section>
+	)
 }
 
 export default AdminBeer
