@@ -87,7 +87,7 @@ const AddBrewery = () => {
 						name="name"
 						className="inputBar"
 						type="text"
-						value={brewery.Name}
+						value={brewery.name}
 						placeholder="Enter Brewery Name"
 						onChange={updateBreweryObject}
 					/>
@@ -96,7 +96,7 @@ const AddBrewery = () => {
 						name="url"
 						className="inputBar"
 						type="text"
-						value={brewery.URL}
+						value={brewery.url}
 						placeholder="Enter Brewery Pic URL"
 						onChange={updateBreweryObject}
 					/>
@@ -105,7 +105,7 @@ const AddBrewery = () => {
 						name="address"
 						className="inputBar"
 						type="text"
-						value={brewery.Address}
+						value={brewery.address}
 						placeholder="Enter Brewery Address"
 						onChange={updateBreweryObject}
 					/>
@@ -114,7 +114,7 @@ const AddBrewery = () => {
 						name="phoneNumber"
 						className="inputBar"
 						type="text"
-						value={brewery.PhoneNumber}
+						value={brewery.phoneNumber}
 						placeholder="Enter Brewery Phone Number"
 						onChange={updateBreweryObject}
 					/>
@@ -123,7 +123,7 @@ const AddBrewery = () => {
 						name="website"
 						className="inputBar"
 						type="text"
-						value={brewery.Website}
+						value={brewery.website}
 						placeholder="Enter Brewery Website Address"
 						onChange={updateBreweryObject}
 					/>
