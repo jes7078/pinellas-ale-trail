@@ -149,13 +149,12 @@ body {
 
 .featuredStyleLocalBeersHeader {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding: 0;
 	justify-content: center;
 	margin-top: .5rem;
 	margin-left: 0;
 	margin-right: 0;
-	width: 96%;
 }
 
 .featuredStyleLocalBeersHeader h1 {
