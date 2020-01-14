@@ -82,7 +82,7 @@ const AddBrewery = () => {
 	return (
 		<section>
 			<Menu />
-			<h1 className="addBreweryTitle">Add, Update, or Delete a Brewery Page</h1>
+			<h1 className="borderedTitle">Add, Update, or Delete a Brewery Page</h1>
 			<section className="addBreweryInputSection">
 				<form>
 					<label>Name of Brewery</label>
@@ -143,7 +143,7 @@ const AddBrewery = () => {
 					</section>
 				</form>
 			</section>
-			<h1 className="currentBreweriesTitle">Current Breweries</h1>
+			<h1 className="borderedTitle">Current Breweries</h1>
 			<section className="addCurrentBreweriesList">
 				<ul>
 					{breweryList.map((bre, index) => {

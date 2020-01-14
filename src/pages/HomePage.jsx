@@ -90,12 +90,12 @@ const HomePage = () => {
 	return (
 		<section className="homePage">
 			<Menu />
-			<h1 id="featuredStyleTitle">Featured Style</h1>
+			<h1 className="borderedTitle">Featured Style</h1>
 			<section className="featuredStyleSection">
 				<h1 id="styleTitle">{style[styleNumber] && style[styleNumber].style}</h1>
 				<p id="styleDescription"> {style[styleNumber] && style[styleNumber].description}</p>
 			</section>
-			<h1 id="featuredStyleBreweryTitle">Featured Style Local Beers</h1>
+			<h1 className="borderedTitle">Featured Style Local Beers</h1>
 			<section className="featuredStyleLocalBeersSection">
 				<section className="featuredStyleLocalBeersHeader">
 					<h1 id="featuredBeer">{localStyles[localStyleNumber] && localStyles[localStyleNumber].name}</h1>

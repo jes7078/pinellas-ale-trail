@@ -19,7 +19,7 @@ const BreweryMap = () => {
 		<section className="Breweries">
 			<Menu />
 
-			<h1 id="breweriesTitle">Breweries in Dunedin</h1>
+			<h1 className="borderedTitle">Breweries in Dunedin</h1>
 
 			<section className="breweryList">
 				<ul>
@@ -34,7 +34,7 @@ const BreweryMap = () => {
 				</ul>
 			</section>
 			<section className="mapSection">
-				<h1 id="mapTitle">Map of Dunedin</h1>
+				<h1 className="borderedTitle">Map of Dunedin</h1>
 				<img id="map" src="../Images/MapOfBreweries.png" />
 			</section>
 		</section>

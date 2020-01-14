@@ -10,7 +10,7 @@ const AdminPage = () => {
 		<section>
 			<Menu />
 
-			<h1 className="adminTitle">Admin Page</h1>
+			<h1 className="borderedTitle">Admin Page</h1>
 			<section className="adminLinks">
 				<nav>
 					<ul>

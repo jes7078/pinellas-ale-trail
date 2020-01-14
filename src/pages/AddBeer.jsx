@@ -111,7 +111,7 @@ const AdminBeer = () => {
 	return (
 		<section>
 			<Menu />
-			<h1 className="addBeerTitle">Add, Update, or Delete a Beer Page</h1>
+			<h1 className="borderedTitle">Add, Update, or Delete a Beer Page</h1>
 			<section className="addBeerInputSection">
 				<form>
 					<section className="addBeerButtons">
@@ -213,7 +213,7 @@ const AdminBeer = () => {
 					</section>
 				</form>
 			</section>
-			<h1 className="currentBeersTitle">Current Beers</h1>
+			<h1 className="borderedTitle">Current Beers</h1>
 			<section className="addCurrentBeersList">
 				<ul>
 					{beerList.map((bee, index) => {

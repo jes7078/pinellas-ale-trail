@@ -76,7 +76,7 @@ const AddStyle = () => {
 	return (
 		<section>
 			<Menu />
-			<h1 className="addStyleTitle">Add, Update, or Delete a Style Page</h1>
+			<h1 className="borderedTitle">Add, Update, or Delete a Style Page</h1>
 			<section className="addStyleInputSection">
 				<form>
 					<label>Enter Style of Beer</label>
@@ -119,7 +119,7 @@ const AddStyle = () => {
 					</section>
 				</form>
 			</section>
-			<h1 className="currentStylesTitle">Current Styles</h1>
+			<h1 className="borderedTitle">Current Styles</h1>
 			<section className="addCurrentStylesList">
 				<ul>
 					{beerStyleList.map((style, index) => {

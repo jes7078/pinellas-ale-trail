@@ -66,7 +66,7 @@ const Breweries = (props) => {
 	return (
 		<section className="breweries">
 			<Menu />
-			<h1 id="breweryPageTitle">Welcome to {props.match.params.name}</h1>
+			<h1 className="borderedTitle">Welcome to {props.match.params.name}</h1>
 			{/* Featured Beer Section */}
 
 			<section className="breweryPageBeer">
@@ -89,7 +89,7 @@ const Breweries = (props) => {
 			</section>
 			{/* Menu Section */}
 			<section className="menuTitle">
-				<h1 id="currentMenuTitle">Current Menu</h1>
+				<h1 className="borderedTitle">Current Menu</h1>
 			</section>
 			<section className="beerListBackground">
 				<section className="beerList">
