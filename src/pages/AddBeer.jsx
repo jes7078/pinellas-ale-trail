@@ -4,6 +4,7 @@ import Menu from '../components/Menu'
 
 const AdminBeer = () => {
 	const [ breweryList, setBreweryList ] = useState([])
+	const [ beerStyleList, setBeerStyleList ] = useState([])
 	const [ beerList, setBeerList ] = useState([])
 	const [ beer, setBeer ] = useState({
 		id: 0,
@@ -23,6 +24,21 @@ const AdminBeer = () => {
 		}))
 	}
 
+	const selectBreweriesId = (e, brewery) => {
+		e.preventDefault()
+		setBeer((prevBeer) => ({
+			...prevBeer,
+			breweriesId: brewery.id
+		}))
+	}
+
+	const selectBeerStyleId = (e, sty) => {
+		e.preventDefault()
+		setBeer((prevBeer) => ({
+			...prevBeer,
+			beerStyleId: sty.id
+		}))
+	}
 	const selectIt = (id) => {
 		const filterBeer = beerList.filter((beer) => {
 			return beer.id === id
@@ -81,9 +97,15 @@ const AdminBeer = () => {
 		setBreweryList(resp.data)
 	}
 
+	const createBeerStyleList = async () => {
+		const resp = await axios.get('https://localhost:5001/api/BeerStyle')
+		setBeerStyleList(resp.data)
+	}
+
 	useEffect(() => {
 		createBeerList()
 		createBreweryList()
+		createBeerStyleList()
 	}, [])
 
 	return (
@@ -138,6 +160,20 @@ const AdminBeer = () => {
 						placeholder="Enter Beer Style Id"
 						onChange={updateBeerObject}
 					/>
+					<section className="addCurrentBeerStylesList">
+						<ul>
+							{beerStyleList.map((sty, index) => {
+								return (
+									<section key={index} className="addBeerStyleList">
+										<button value={sty.id} onClick={(e) => selectBeerStyleId(e, sty)}>
+											Select for Beer Style Id
+										</button>
+										<li key={index}>{sty.style}</li>
+									</section>
+								)
+							})}
+						</ul>
+					</section>
 
 					<label>Brewery Id of Beer</label>
 					<input
@@ -149,6 +185,21 @@ const AdminBeer = () => {
 						placeholder="Enter Brewery Id"
 						onChange={updateBeerObject}
 					/>
+
+					<section className="addCurrentBreweriesList">
+						<ul>
+							{breweryList.map((bre, index) => {
+								return (
+									<section key={index} className="addBreweryList">
+										<button value={bre.id} onClick={(e) => selectBreweriesId(e, bre)}>
+											Select for Brewery Id
+										</button>
+										<li key={index}>{bre.name}</li>
+									</section>
+								)
+							})}
+						</ul>
+					</section>
 
 					<section className="addBeerButtons">
 						<button className="addButton" onClick={addIt}>
