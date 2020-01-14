@@ -114,6 +114,17 @@ const AdminBeer = () => {
 			<h1 className="addBeerTitle">Add, Update, or Delete a Beer Page</h1>
 			<section className="addBeerInputSection">
 				<form>
+					<section className="addBeerButtons">
+						<button className="addButton" onClick={addIt}>
+							Add
+						</button>
+						<button className="updateButton" onClick={updateIt}>
+							Update
+						</button>
+						<button className="deleteButton" onClick={(e) => deleteit(e, beer)}>
+							Delete
+						</button>
+					</section>
 					<label>Name of Beer</label>
 					<input
 						name="name"
@@ -199,18 +210,6 @@ const AdminBeer = () => {
 								)
 							})}
 						</ul>
-					</section>
-
-					<section className="addBeerButtons">
-						<button className="addButton" onClick={addIt}>
-							Add
-						</button>
-						<button className="updateButton" onClick={updateIt}>
-							Update
-						</button>
-						<button className="deleteButton" onClick={(e) => deleteit(e, beer)}>
-							Delete
-						</button>
 					</section>
 				</form>
 			</section>
