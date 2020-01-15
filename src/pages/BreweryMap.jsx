@@ -35,7 +35,10 @@ const BreweryMap = () => {
 			</section>
 			<section className="mapSection">
 				<h1 className="borderedTitle">Map of Dunedin</h1>
-				<img id="map" src="../Images/MapOfBreweries.png" />
+				<img
+					id="map"
+					src="https://res.cloudinary.com/jes7078/image/upload/v1579123341/BreweryAPIPics/Other/MapofBreweries.png"
+				/>
 			</section>
 		</section>
 	)

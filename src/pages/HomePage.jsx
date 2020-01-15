@@ -15,8 +15,7 @@ const HomePage = () => {
 			breweries: {
 				name: 'with this style'
 			},
-			beerURL:
-				'https://previews.123rf.com/images/valeo5/valeo51605/valeo5160500533/56790169-no-beer-sign-isolated-on-white-background-no-alcohol-allowed-sign-.jpg'
+			beerURL: 'https://res.cloudinary.com/jes7078/image/upload/v1579122905/BreweryAPIPics/Other/noBeer.jpg'
 		}
 	])
 
@@ -32,7 +31,7 @@ const HomePage = () => {
 				if (styleNumber >= style.length - 1) {
 					setStyleNumber(0)
 				} else {
-					setStyleNumber((prev) => prev + 1)
+					setStyleNumber(Math.floor(Math.random() * style.length))
 				}
 			}, 10000)
 			return () => {
@@ -67,7 +66,7 @@ const HomePage = () => {
 				if (localStyleNumber >= localStyles.length - 1) {
 					setLocalStyleNumber(0)
 				} else {
-					setLocalStyleNumber((prev) => prev + 1)
+					setLocalStyleNumber(Math.floor(Math.random() * localStyles.length))
 				}
 			}, 3000)
 			return () => {
