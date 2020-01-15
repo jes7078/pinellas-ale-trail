@@ -134,10 +134,10 @@ const AddBrewery = () => {
 						<button className="addButton" onClick={addIt}>
 							Add
 						</button>
-						<button className="updateButton" onClick={updateIt}>
+						<button className="addButton" onClick={updateIt}>
 							Update
 						</button>
-						<button className="deleteButton" onClick={(e) => deleteit(e, brewery)}>
+						<button className="addButton" onClick={(e) => deleteit(e, brewery)}>
 							Delete
 						</button>
 					</section>

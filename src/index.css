@@ -20,53 +20,168 @@ body {
 	height: 100%;
 	width: 100%;
 }
+
 /********************************* Menu */
 
 .menu {
 	margin: auto;
-	margin-top: .5rem;
 	background-image: url("https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500");
 	color: transparent;
 	background-clip: text;
 	text-align: center;
 	background-position: center;
 	width: 80%;
+	margin-top: .5rem;
 }
 
 #menuTitle {
 	text-align: center;
-	font-size: 8rem;
 	margin: 0;
 	font-family: 'Milonga', cursive;
 }
 
+@media screen and (min-width: 1550px) {
+	#menuTitle {
+		font-size: 8rem;
+	}
+}
+
+@media screen and (min-width: 1158px) and (max-width: 1549px) {
+	#menuTitle {
+		font-size: 6rem;
+	}
+}
+
+@media screen and (min-width: 774px) and (max-width: 1157px) {
+	#menuTitle {
+		font-size: 4rem;
+	}
+}
+
+@media screen and (min-width: 585px) and (max-width: 773px) {
+	#menuTitle {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 426px) and (max-width: 584px) {
+	#menuTitle {
+		font-size: 2.2rem;
+	}
+}
+
+@media screen and (min-width: 351px) and (max-width: 425px) {
+	#menuTitle {
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#menuTitle {
+		font-size: 1.4rem;
+	}
+}
+
 .menuLinks ul {
 	list-style: none;
-	display: inline-flex;
-	flex-direction: row;
 	margin: 0;
 	padding: 0;
 	justify-content: space-around;
 }
 
 .menuLinks li {
-	margin: 1rem;
-	padding: 1rem;
 	font-family: 'Milonga', cursive;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(246, 229, 202);
-	width: 10rem;
-}
-
-.menuLinks a {
-	text-decoration: none;
-	color: black;
-	font-size: 1.5rem;
 }
 
 .menuLinks li:hover {
 	transition: .8s;
 	background: red;
+}
+
+@media screen and (min-width: 1550px) {
+	.menuLinks li {
+		margin: 1rem;
+		padding: 1rem;
+		width: 10rem;
+		display: inline-flex;
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 1158px) and (max-width: 1549px) {
+	.menuLinks li {
+		margin: 1rem;
+		padding: 1rem;
+		width: 8rem;
+		display: inline-flex;
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1157px) {
+	.menuLinks li {
+		margin: 1rem;
+		padding-left: .5rem;
+		padding-right: .5rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 8rem;
+		display: inline-flex;
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.menuLinks li {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: .5rem;
+		margin-bottom: .5rem;
+		padding: .5rem;
+		width: 350px;
+		display: flex;
+		height: 2rem;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.menuLinks li {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: .5rem;
+		margin-bottom: .5rem;
+		padding: .5rem;
+		width: 200px;
+		height: 2rem;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.menuLinks a {
+	text-decoration: none;
+	color: black;
+	margin: auto;
+}
+@media screen and (min-width: 1550px) {
+	.menuLinks a {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 774px) and (max-width: 1549px) {
+	.menuLinks a {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 773px) {
+	.menuLinks a {
+		font-size: 1.1rem;
+	}
 }
 
 /*-----------Home Page Featured Style Section------------------*/
@@ -75,65 +190,133 @@ body {
 	text-align: center;
 	color: black;
 	font-family: 'Milonga', cursive;
-	padding-bottom: .25rem;
-	border-top: 2.5px solid black;
-	border-bottom: 2.5px solid black;
 	width: 80%;
 	margin: auto;
+	border-top: 2.5px solid black;
+	border-bottom: 2.5px solid black;
 	padding: 1rem;
-	font-size: 4rem;
 }
 
-.featuredStyleSection {
+@media screen and (min-width: 1550px) {
+	.borderedTitle {
+		font-size: 4rem;
+	}
+}
+
+@media screen and (min-width: 774px) and (max-width: 1549px) {
+	.borderedTitle {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 478px) and (max-width: 773px) {
+	.borderedTitle {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 477px) {
+	.borderedTitle {
+		font-size: 1.2rem;
+	}
+}
+
+.featuredSection {
 	display: flex;
 	flex-direction: column;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	color: black;
 	text-align: center;
 	width: 80%;
-	margin-bottom: .5rem;
-	margin-top: .5rem;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 #styleTitle {
-	margin: auto;
-	font-size: 3rem;
-	margin-top: .5rem;
 	color: black;
 	font-family: 'Vollkorn', serif;
+	padding: 1rem;
+	margin: 0;
+}
+
+@media screen and (min-width: 1550px) {
+	#styleTitle {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 774px) and (max-width: 1549px) {
+	#styleTitle {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 773px) {
+	#styleTitle {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 399px) {
+	#styleTitle {
+		font-size: 1.8rem;
+	}
 }
 
 #styleDescription {
-	width: 96%;
-	margin: auto;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-	font-family: 'Vollkorn', serif;
-	font-size: 2rem;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 0;
+}
+
+@media screen and (min-width: 1550px) {
+	#styleDescription {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 1549px) {
+	#styleDescription {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 399px) {
+	#styleDescription {
+		font-size: 1.2rem;
+	}
 }
 
 /*-----------Home Page Featured Style Local Beers----------------*/
 
-.featuredStyleLocalBeersSection {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	color: black;
-	text-align: center;
-	background-position: center;
-	width: 80%;
-	margin-top: 1rem;
-}
-
 #featuredStyleLocalBeersPicture {
 	width: 96%;
-	height: 35rem;
 	border-radius: 10px;
 	object-fit: contain;
 	margin: auto;
 	margin-top: 1rem;
 }
 
+@media screen and (min-width: 1550px) {
+	#featuredStyleLocalBeersPicture {
+		height: 35rem;
+	}
+}
+
+@media screen and (min-width: 550px) and (max-width: 1549px) {
+	#featuredStyleLocalBeersPicture {
+		height: 25rem;
+	}
+}
+
+@media screen and (max-width: 549px) {
+	#featuredStyleLocalBeersPicture {
+		height: 20rem;
+	}
+}
 .featuredStyleLocalBeersHeader {
 	display: flex;
 	flex-direction: column;
@@ -147,10 +330,27 @@ body {
 .featuredStyleLocalBeersHeader h1 {
 	padding: 0;
 	margin: 0;
-	font-size: 3rem;
 	color: black;
 	font-family: 'Vollkorn', serif;
 }
+@media screen and (min-width: 1550px) {
+	.featuredStyleLocalBeersHeader h1 {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 1549px) {
+	.featuredStyleLocalBeersHeader h1 {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 399px) {
+	.featuredStyleLocalBeersHeader h1 {
+		font-size: 1.2rem;
+	}
+}
+
 #featuredBeer {
 	margin-right: .5rem;
 }
@@ -176,14 +376,35 @@ body {
 	height: 2rem;
 	background-color: rgb(246, 229, 202);
 	border: 1px solid black;
-	width: 50%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
 
+.breweryList li:hover {
+	transition: .8s;
+	background: red;
+}
+
+@media screen and (min-width: 800px) {
+	.breweryList li {
+		width: 600px;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.breweryList li {
+		width: 350px;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.breweryList li {
+		width: 200px;
+	}
+}
+
 .breweryList li a {
-	font-size: 2rem;
 	text-decoration: none;
 	justify-content: center;
 	color: black;
@@ -192,9 +413,22 @@ body {
 	margin: auto;
 }
 
-.breweryList li:hover {
-	transition: .8s;
-	background: red;
+@media screen and (min-width: 800px) {
+	.breweryList li a {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.breweryList li a {
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.breweryList li a {
+		font-size: 1rem;
+	}
 }
 
 #map {
@@ -208,24 +442,6 @@ body {
 
 /*------Breweries Page------------*/
 
-.breweryPagePictureSection {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	background-position: center;
-	width: 80%;
-	margin-top: .5rem;
-	margin-bottom: 1rem;
-}
-
-#breweryBeerPicture {
-	width: 96%;
-	height: 30rem;
-	border-radius: 10px;
-	object-fit: contain;
-	margin: auto;
-}
-
 #featuredBeerTitle {
 	padding: 0;
 	margin: 1rem;
@@ -235,11 +451,71 @@ body {
 	font-family: 'Vollkorn', serif;
 }
 
+@media screen and (min-width: 800px) {
+	#featuredBeerTitle {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	#featuredBeerTitle {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	#featuredBeerTitle {
+		font-size: 1.5rem;
+	}
+}
+
+#breweryBeerPicture {
+	width: 96%;
+	border-radius: 10px;
+	object-fit: contain;
+	margin: auto;
+}
+
+@media screen and (min-width: 800px) {
+	#breweryBeerPicture {
+		height: 30rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	#breweryBeerPicture {
+		height: 20rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	#breweryBeerPicture {
+		height: 10rem;
+	}
+}
+
 .breweryPagePictureFooter {
 	color: black;
 	margin: auto;
-	font-size: 2rem;
 	font-family: 'Vollkorn', serif;
+}
+
+@media screen and (min-width: 800px) {
+	.breweryPagePictureFooter {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.breweryPagePictureFooter {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.breweryPagePictureFooter {
+		font-size: 1rem;
+	}
 }
 
 .beerListBackground {
@@ -260,14 +536,37 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
 	backdrop-filter: blur(10px);
-	background-attachment: fixed;
-	border: 70px solid transparent;
-	box-sizing: border-box;
-	border-image: url('https://images.squarespace-cdn.com/content/v1/55798db3e4b064c851d882ed/1451421346498-1MSVFXYW6F9I71WP49TH/ke17ZwdGBToddI8pDm48kGP2kDL8laIfNDTHnzBPhyB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0oGwQPSn8VqSSM4mc7rOnog_kMeh2Z3cO4QouP5z7x2-_sMrpUSLM7UVwWjxIUxHdw/Woodgrain.jpg?format=2500w')
-		30 round;
 	justify-content: center;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 800px) {
+	.beerList {
+		border: 70px solid transparent;
+		background-attachment: fixed;
+		border-image: url('https://images.squarespace-cdn.com/content/v1/55798db3e4b064c851d882ed/1451421346498-1MSVFXYW6F9I71WP49TH/ke17ZwdGBToddI8pDm48kGP2kDL8laIfNDTHnzBPhyB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0oGwQPSn8VqSSM4mc7rOnog_kMeh2Z3cO4QouP5z7x2-_sMrpUSLM7UVwWjxIUxHdw/Woodgrain.jpg?format=2500w')
+			30 round;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.beerList {
+		border: 50px solid transparent;
+		background-attachment: fixed;
+		border-image: url('https://images.squarespace-cdn.com/content/v1/55798db3e4b064c851d882ed/1451421346498-1MSVFXYW6F9I71WP49TH/ke17ZwdGBToddI8pDm48kGP2kDL8laIfNDTHnzBPhyB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0oGwQPSn8VqSSM4mc7rOnog_kMeh2Z3cO4QouP5z7x2-_sMrpUSLM7UVwWjxIUxHdw/Woodgrain.jpg?format=2500w')
+			30 round;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.beerList {
+		border: 30px solid transparent;
+		background-attachment: fixed;
+		border-image: url('https://images.squarespace-cdn.com/content/v1/55798db3e4b064c851d882ed/1451421346498-1MSVFXYW6F9I71WP49TH/ke17ZwdGBToddI8pDm48kGP2kDL8laIfNDTHnzBPhyB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0oGwQPSn8VqSSM4mc7rOnog_kMeh2Z3cO4QouP5z7x2-_sMrpUSLM7UVwWjxIUxHdw/Woodgrain.jpg?format=2500w')
+			30 round;
+	}
 }
 
 .beerList ul {
@@ -285,7 +584,6 @@ body {
 }
 
 .beerList li {
-	font-size: 2rem;
 	display: inline-block;
 	color: #dcdcdc;
 	display: inline-block;
@@ -293,6 +591,24 @@ body {
 	padding-top: .25rem;
 	width: 98%;
 	text-align: center;
+}
+
+@media screen and (min-width: 850px) {
+	.beerList li {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 849px) {
+	.beerList li {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.beerList li {
+		font-size: .75rem;
+	}
 }
 
 /*-------------------Admin Page-----------------------------*/
@@ -310,20 +626,36 @@ body {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	font-family: 'Milonga', cursive;
+	border: 1px solid black;
+	background-color: rgb(246, 229, 202);
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
-	font-family: 'Milonga', cursive;
-	border: 2px solid black;
-	width: 25rem;
-	background-color: rgb(246, 229, 202);
+}
+
+@media screen and (min-width: 800px) {
+	.adminLinks li {
+		width: 25rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.adminLinks li {
+		width: 23rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.adminLinks li {
+		width: 13rem;
+	}
 }
 
 .adminLinks a {
 	text-decoration: none;
 	color: black;
-	font-size: 1.5rem;
 	background-position: center;
 	justify-self: center;
 	padding: .25rem;
@@ -332,6 +664,24 @@ body {
 .adminLinks li:hover {
 	transition: .8s;
 	background: red;
+}
+
+@media screen and (min-width: 800px) {
+	.adminLinks a {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.adminLinks a {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.adminLinks a {
+		font-size: 1rem;
+	}
 }
 
 /*--------Add Update Delete Brewery----------------*/
@@ -345,22 +695,85 @@ body {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	text-align: center;
-	font-size: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+	.addBreweryInputSection label {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.addBreweryInputSection label {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.addBreweryInputSection label {
+		font-size: 1.2rem;
+	}
 }
 
 .addBreweryInputSection Input {
 	text-align: center;
-	width: 40rem;
 	margin-left: auto;
 	margin-right: auto;
 	height: 3rem;
 	padding: 0;
-	font-size: 2rem;
+}
+
+@media screen and (min-width: 1680px) {
+	.addBreweryInputSection Input {
+		width: 100rem;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1680px) {
+	.addBreweryInputSection Input {
+		width: 70rem;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 880px) and (max-width: 1199px) {
+	.addBreweryInputSection Input {
+		width: 50rem;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 879px) {
+	.addBreweryInputSection Input {
+		width: 40rem;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.addBreweryInputSection Input {
+		width: 30rem;
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 415px) and (max-width: 499px) {
+	.addBreweryInputSection Input {
+		width: 25rem;
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.addBreweryInputSection Input {
+		width: 20rem;
+		font-size: 1.2rem;
+	}
 }
 
 .addBreweryButtons {
 	display: flex;
-	flex-direction: row;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1rem;
@@ -368,16 +781,53 @@ body {
 	margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 800px) {
+	.addBreweryButtons {
+		flex-direction: row;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	.addBreweryButtons {
+		flex-direction: column;
+	}
+}
+
 .addButton {
-	margin-right: 1rem;
-	width: 5rem;
+	font-family: 'Milonga', cursive;
+	border: 1px solid black;
+	background-color: rgb(246, 229, 202);
 	padding-top: .5rem;
 	padding-bottom: .5rem;
-	font-family: 'Milonga', cursive;
-	border: 2px solid black;
-	background-color: rgb(246, 229, 202);
-	font-size: 1.5rem;
-	width: 7rem;
+}
+
+@media screen and (min-width: 800px) {
+	.addButton {
+		margin-right: 1rem;
+		width: 5rem;
+		font-size: 1.5rem;
+		width: 7rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+	.addButton {
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		width: 350px;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.addButton {
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		width: 200px;
+	}
 }
 
 .addButton:hover {
@@ -385,82 +835,82 @@ body {
 	background: red;
 }
 
-.updateButton {
-	margin-right: 1rem;
-	width: 5rem;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	font-family: 'Milonga', cursive;
-	border: 2px solid black;
-	background-color: rgb(246, 229, 202);
-	font-size: 1.5rem;
-	width: 7rem;
-}
-
-.updateButton:hover {
-	transition: .8s;
-	background: red;
-}
-
-.deleteButton {
-	width: 5rem;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	font-family: 'Milonga', cursive;
-	border: 2px solid black;
-	background-color: rgb(246, 229, 202);
-	font-size: 1.5rem;
-	width: 7rem;
-}
-
-.deleteButton:hover {
-	transition: .8s;
-	background: red;
-}
-
 .addCurrentBreweriesList {
 	width: 80%;
 	margin: auto;
+	margin-bottom: 1rem;
 }
 .addBreweryList {
 	display: flex;
-	flex-direction: row;
 	margin-top: 1rem;
 	padding: 0;
-	width: 50rem;
 	margin: auto;
 }
 
-.addBreweryList li {
-	margin-right: 2rem;
-	font-size: 2rem;
-	border: 2px solid #fffcf9;
-	vertical-align: middle;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-	text-align: center;
-	margin-top: 1rem;
-	width: 25rem;
+@media screen and (min-width: 1100px) {
+	.addBreweryList {
+		flex-direction: row;
+		width: 50rem;
+	}
+}
+
+@media screen and (max-width: 1099px) {
+	.addBreweryList {
+		flex-direction: column;
+	}
 }
 
 .addCurrentBreweriesList ul {
 	list-style: none;
-	margin: 0;
+	margin: auto;
 	padding: 0;
+}
+
+.addBreweryList li {
+	border: 1px solid #fffcf9;
+	vertical-align: middle;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+}
+
+@media screen and (min-width: 1100px) {
+	.addBreweryList li {
+		margin-right: 2rem;
+		width: 25rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 1099px) {
+	.addBreweryList li {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.addBreweryList li {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 1.5rem;
+	}
 }
 
 .addBreweryList button {
 	padding-top: .5rem;
 	padding-bottom: .5rem;
-	width: 15rem;
 	font-family: 'Milonga', cursive;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-color: rgb(246, 229, 202);
-	margin-right: 1rem;
-	margin-left: 7rem;
 	margin-top: 1rem;
-	height: 6rem;
-	font-size: 1.5rem;
 }
 
 .addBreweryList button:hover {
@@ -468,224 +918,32 @@ body {
 	background: red;
 }
 
-/*--------Add Update Delete Beer----------------*/
-
-.addBeerInputSection form {
-	display: flex;
-	flex-direction: column;
+@media screen and (min-width: 1100px) {
+	.addBreweryList button {
+		width: 15rem;
+		margin-right: 1rem;
+		margin-left: 7rem;
+		height: 6rem;
+		font-size: 1.5rem;
+	}
 }
 
-.addCurrentBreweriesList {
-	margin-bottom: 1rem;
+@media screen and (min-width: 500px) and (max-width: 1099px) {
+	.addBreweryList button {
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 6rem;
+		font-size: 1.5rem;
+	}
 }
 
-.addBeerInputSection label {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	text-align: center;
-	font-size: 2rem;
-}
-
-.addBeerInputSection Input {
-	text-align: center;
-	width: 40rem;
-	margin-left: auto;
-	margin-right: auto;
-	height: 3rem;
-	padding: 0;
-	font-size: 2rem;
-}
-
-.addBeerButtons {
-	display: flex;
-	flex-direction: row;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1rem;
-	padding: 0;
-}
-
-.addCurrentBeersList {
-	width: 80%;
-	margin: auto;
-}
-.addBeerList {
-	display: flex;
-	flex-direction: row;
-	margin-top: 1rem;
-	padding: 0;
-	width: 50rem;
-	margin: auto;
-}
-
-.addBeerList li {
-	margin-right: 2rem;
-	font-size: 2rem;
-	border: 2px solid #fffcf9;
-	vertical-align: middle;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-	text-align: center;
-	margin-top: 1rem;
-	width: 25rem;
-}
-
-.addCurrentBeersList ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	margin-bottom: 5rem;
-}
-
-.addBeerList button {
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	width: 15rem;
-	font-family: 'Milonga', cursive;
-	border: 2px solid black;
-	background-color: rgb(246, 229, 202);
-	margin-right: 1rem;
-	margin-left: 7rem;
-	margin-top: 1rem;
-	height: 6rem;
-	font-size: 1.5rem;
-}
-
-.addBeerList button:hover {
-	transition: .8s;
-	background: red;
-}
-
-.addCurrentBeerStylesList {
-	width: 80%;
-	margin: auto;
-}
-
-.addCurrentBeerStylesList ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.addBeerStyleList {
-	display: flex;
-	flex-direction: row;
-	margin-top: 1rem;
-	padding: 0;
-	width: 50rem;
-	margin: auto;
-}
-
-.addBeerStyleList li {
-	margin-right: 2rem;
-	font-size: 2rem;
-	border: 2px solid #fffcf9;
-	vertical-align: middle;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-	text-align: center;
-	margin-top: 1rem;
-	width: 25rem;
-}
-
-.addBeerStyleList button {
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	width: 15rem;
-	font-family: 'Milonga', cursive;
-	border: 2px solid black;
-	background-color: rgb(246, 229, 202);
-	margin-right: 1rem;
-	margin-left: 7rem;
-	margin-top: 1rem;
-	height: 6rem;
-	font-size: 1.5rem;
-}
-
-.addBeerStyleList button:hover {
-	transition: .8s;
-	background: red;
-}
-
-/*--------Add Update Delete Style----------------*/
-
-.addStyleInputSection form {
-	display: flex;
-	flex-direction: column;
-}
-
-.addStyleInputSection label {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	text-align: center;
-	font-size: 2rem;
-}
-
-.addStyleInputSection Input {
-	text-align: center;
-	width: 40rem;
-	margin-left: auto;
-	margin-right: auto;
-	height: 3rem;
-	padding: 0;
-	font-size: 2rem;
-}
-
-.addStyleButtons {
-	display: flex;
-	flex-direction: row;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1rem;
-	padding: 0;
-}
-
-.addCurrentStylesList {
-	width: 80%;
-	margin: auto;
-}
-.addStyleList {
-	display: flex;
-	flex-direction: row;
-	margin-top: 1rem;
-	padding: 0;
-	width: 50rem;
-	margin: auto;
-}
-
-.addStyleList li {
-	margin-right: 2rem;
-	font-size: 2rem;
-	border: 2px solid #fffcf9;
-	vertical-align: middle;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-	text-align: center;
-	margin-top: 1rem;
-	width: 25rem;
-}
-
-.addCurrentStylesList ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.addStyleList button {
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	width: 15rem;
-	font-family: 'Milonga', cursive;
-	border: 2px solid black;
-	background-color: rgb(246, 229, 202);
-	margin-right: 1rem;
-	margin-left: 7rem;
-	margin-top: 1rem;
-	height: 6rem;
-	font-size: 1.5rem;
-}
-
-.addStyleList button:hover {
-	transition: .8s;
-	background: red;
+@media screen and (max-width: 499px) {
+	.addBreweryList button {
+		width: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 5rem;
+		font-size: 1.1rem;
+	}
 }

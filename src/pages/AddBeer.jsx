@@ -112,16 +112,16 @@ const AdminBeer = () => {
 		<section>
 			<Menu />
 			<h1 className="borderedTitle">Add, Update, or Delete a Beer Page</h1>
-			<section className="addBeerInputSection">
+			<section className="addBreweryInputSection">
 				<form>
-					<section className="addBeerButtons">
+					<section className="addBreweryButtons">
 						<button className="addButton" onClick={addIt}>
 							Add
 						</button>
-						<button className="updateButton" onClick={updateIt}>
+						<button className="addButton" onClick={updateIt}>
 							Update
 						</button>
-						<button className="deleteButton" onClick={(e) => deleteit(e, beer)}>
+						<button className="addButton" onClick={(e) => deleteit(e, beer)}>
 							Delete
 						</button>
 					</section>
@@ -171,11 +171,11 @@ const AdminBeer = () => {
 						placeholder="Enter Beer Style Id"
 						onChange={updateBeerObject}
 					/>
-					<section className="addCurrentBeerStylesList">
+					<section className="addCurrentBreweriesList">
 						<ul>
 							{beerStyleList.map((sty, index) => {
 								return (
-									<section key={index} className="addBeerStyleList">
+									<section key={index} className="addBreweryList">
 										<button value={sty.id} onClick={(e) => selectBeerStyleId(e, sty)}>
 											Select for Beer Style Id
 										</button>
@@ -214,11 +214,11 @@ const AdminBeer = () => {
 				</form>
 			</section>
 			<h1 className="borderedTitle">Current Beers</h1>
-			<section className="addCurrentBeersList">
+			<section className="addCurrentBreweriesList">
 				<ul>
 					{beerList.map((bee, index) => {
 						return (
-							<section key={index} className="addBeerList">
+							<section key={index} className="addBreweryList">
 								<button value={bee.id} onClick={() => selectIt(bee.id)}>
 									Select for Update or Delete
 								</button>

@@ -91,12 +91,12 @@ const HomePage = () => {
 		<section className="homePage">
 			<Menu />
 			<h1 className="borderedTitle">Featured Style</h1>
-			<section className="featuredStyleSection">
+			<section className="featuredSection">
 				<h1 id="styleTitle">{style[styleNumber] && style[styleNumber].style}</h1>
 				<p id="styleDescription"> {style[styleNumber] && style[styleNumber].description}</p>
 			</section>
 			<h1 className="borderedTitle">Featured Style Local Beers</h1>
-			<section className="featuredStyleLocalBeersSection">
+			<section className="featuredSection">
 				<section className="featuredStyleLocalBeersHeader">
 					<h1 id="featuredBeer">{localStyles[localStyleNumber] && localStyles[localStyleNumber].name}</h1>
 					<h1 id="featuredBrewery">

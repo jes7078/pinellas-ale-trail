@@ -77,7 +77,7 @@ const AddStyle = () => {
 		<section>
 			<Menu />
 			<h1 className="borderedTitle">Add, Update, or Delete a Style Page</h1>
-			<section className="addStyleInputSection">
+			<section className="addBreweryInputSection">
 				<form>
 					<label>Enter Style of Beer</label>
 					<input
@@ -110,21 +110,21 @@ const AddStyle = () => {
 						<button className="addButton" onClick={addIt}>
 							Add
 						</button>
-						<button className="updateButton" onClick={updateIt}>
+						<button className="addButton" onClick={updateIt}>
 							Update
 						</button>
-						<button className="deleteButton" onClick={(e) => deleteit(e, beerStyle)}>
+						<button className="addButton" onClick={(e) => deleteit(e, beerStyle)}>
 							Delete
 						</button>
 					</section>
 				</form>
 			</section>
 			<h1 className="borderedTitle">Current Styles</h1>
-			<section className="addCurrentStylesList">
+			<section className="addCurrentBreweriesList">
 				<ul>
 					{beerStyleList.map((style, index) => {
 						return (
-							<section key={index} className="addStyleList">
+							<section key={index} className="addBreweryList">
 								<button value={style.id} onClick={() => selectIt(style.id)}>
 									Select for Update or Delete
 								</button>

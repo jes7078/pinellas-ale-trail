@@ -72,7 +72,7 @@ const Breweries = (props) => {
 			<section className="breweryPageBeer">
 				<h1 id="featuredBeerTitle">Random Featured Beer</h1>
 
-				<section className="breweryPagePictureSection">
+				<section className="featuredSection">
 					<img id="breweryBeerPicture" src={localStyles[beerNumber] && localStyles[beerNumber].beerURL} />
 					<section className="breweryPagePictureFooter">
 						<h1>Name: {localStyles[beerNumber] && localStyles[beerNumber].name}</h1>
