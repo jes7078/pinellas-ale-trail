@@ -948,7 +948,7 @@ body {
   }
 }
 
-/*------------------Add Beer Page Image List Component--------------*/
+/*------------------Add Beer Page Image Component--------------*/
 
 .dropzone-content {
   width: 90%;
@@ -972,7 +972,7 @@ body {
   text-align: center;
 }
 .onDropSection {
-  height: 22rem;
+  height: 24rem;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -985,23 +985,6 @@ body {
   margin-right: auto;
   display: block;
   height: 10rem;
-  border: 2px solid green;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-
-/* @media screen and (min-width: 1550px) {
-  .file-list {
-    height: 35rem;
-  }
-}
-
-@media screen and (min-width: 550px) and (max-width: 1549px) {
-  .file-list {
-    height: 25rem;
-  }
-}
-
-@media screen and (max-width: 549px) {
-  .file-list {
-    height: 20rem;
-  }
-}  */
