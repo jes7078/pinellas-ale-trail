@@ -73,6 +73,16 @@ const AdminBeer = () => {
       window.alert('Error, Beer Not Added')
     }
     createBeerList()
+    setBeer({
+      id: 0,
+      name: '',
+      description: '',
+      beerURL: '',
+      abv: '',
+      beerStyleId: '',
+      breweriesId: '',
+    })
+    setImages([])
   }
 
   const updateIt = async e => {
@@ -87,6 +97,16 @@ const AdminBeer = () => {
       window.alert('Error, beer Not Changed')
     }
     createBeerList()
+    setBeer({
+      id: 0,
+      name: '',
+      description: '',
+      beerURL: '',
+      abv: '',
+      beerStyleId: '',
+      breweriesId: '',
+    })
+    setImages([])
   }
 
   const deleteit = async (e, beer) => {
@@ -138,12 +158,10 @@ const AdminBeer = () => {
     const formData = new FormData()
     formData.append('file', file)
     const resp = await axios.post('https://localhost:5001/api/Image', formData)
-    console.log(resp.data.image.url)
     setBeer(prevBeer => ({
       ...prevBeer,
       beerURL: resp.data.image.url,
     }))
-    console.log(beer.beerURL)
   }
 
   return (

@@ -45,7 +45,7 @@ const Breweries = props => {
         setLocalStyles(nullStyle)
       }
     }
-  }, [beer, nullStyle, props.match.params.name])
+  }, [beer, nullStyle, props.location.state.id])
 
   const getBeers = async () => {
     const resp = await axios.get('https://localhost:5001/api/Beers')
@@ -68,6 +68,7 @@ const Breweries = props => {
         <section className="featuredSection">
           <img
             id="breweryBeerPicture"
+            alt="brewery beer"
             src={localStyles[beerNumber] && localStyles[beerNumber].beerURL}
           />
           <section className="breweryPagePictureFooter">

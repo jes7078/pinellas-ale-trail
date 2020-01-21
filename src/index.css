@@ -433,11 +433,25 @@ body {
 
 #map {
   margin-top: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
   width: 80%;
   margin-bottom: 2rem;
+  height: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#map > div {
+  border: 2px solid black;
+}
+
+.fa-map-pin {
+  color: red;
+}
+
+.marker {
+  color: red;
 }
 
 /*------Breweries Page------------*/
