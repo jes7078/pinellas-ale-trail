@@ -27,7 +27,16 @@ const BreweryMap = () => {
 						breweries.map((brewery) => {
 							return (
 								<li>
-									<Link to={`/${brewery.name}`}>{brewery.name}</Link>
+									<Link
+										to={{
+											pathname: `/${brewery.name}`,
+											state: {
+												id: brewery.id
+											}
+										}}
+									>
+										{brewery.name}
+									</Link>
 								</li>
 							)
 						})}
