@@ -10,20 +10,20 @@ import AddStyle from './pages/AddStyle'
 import AddBeer from './pages/AddBeer'
 
 const App = () => {
-	return (
-		<Router>
-			<Switch>
-				<Route exact path="/" component={HomePage} />
-				<Route exact path="/BreweryMap" component={BreweryMap} />
-				<Route exact path="/AdminPage" component={AdminPage} />
-				<Route exact path="/AddBrewery" component={AddBrewery} />
-				<Route exact path="/AddStyle" component={AddStyle} />
-				<Route exact path="/AddBeer" component={AddBeer} />
-				<Route exact path="/:name" component={Breweries} />
-				<Route path="*" component={NotFound} />
-			</Switch>
-		</Router>
-	)
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/BreweryMap" component={BreweryMap} />
+        <Route exact path="/AdminPage" component={AdminPage} />
+        <Route exact path="/AddBrewery" component={AddBrewery} />
+        <Route exact path="/AddStyle" component={AddStyle} />
+        <Route exact path="/AddBeer" component={AddBeer} />
+        <Route exact path="/:name" component={Breweries} />
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </Router>
+  )
 }
 
 export default App
