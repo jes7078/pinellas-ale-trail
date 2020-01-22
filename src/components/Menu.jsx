@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Menu = () => {
   return (
     <section className="menu">
-      <h1 id="menuTitle">The Pinellas Ale Trail</h1>
+      <h1 id="menuTitle">The Pinellas Ale Trail 1</h1>
       <section className="menuLinks">
         <nav>
           <ul>
