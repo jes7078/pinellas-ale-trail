@@ -583,11 +583,11 @@ body {
   .beerList {
     border: 50px solid transparent;
     background-attachment: fixed;
-    /* border-image: url('https://images.squarespace-cdn.com/content/v1/55798db3e4b064c851d882ed/1451421346498-1MSVFXYW6F9I71WP49TH/ke17ZwdGBToddI8pDm48kGP2kDL8laIfNDTHnzBPhyB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0oGwQPSn8VqSSM4mc7rOnog_kMeh2Z3cO4QouP5z7x2-_sMrpUSLM7UVwWjxIUxHdw/Woodgrain.jpg?format=2500w')
-      30 round; */
+    border-image: url('https://images.squarespace-cdn.com/content/v1/55798db3e4b064c851d882ed/1451421346498-1MSVFXYW6F9I71WP49TH/ke17ZwdGBToddI8pDm48kGP2kDL8laIfNDTHnzBPhyB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0oGwQPSn8VqSSM4mc7rOnog_kMeh2Z3cO4QouP5z7x2-_sMrpUSLM7UVwWjxIUxHdw/Woodgrain.jpg?format=2500w')
+      30 round;
     /* border-image: url('https://res.cloudinary.com/jes7078/image/upload/v1579718555/BreweryAPIPics/Woodgrain.jpg')
 			30 round; */
-    border-image: url(../public/Images/Woodgrain.jpg) 30 round;
+    /* border-image: url(../public/Images/Woodgrain.jpg) 30 round; */
   }
 }
 
