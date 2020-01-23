@@ -559,7 +559,7 @@ body {
   background-attachment: fixed;
   border-image: url(./Images/Woodgrain.png) 30 round;
   /*webkit*/
-  -webkit-width: 100%;
+  /* -webkit-width: 100%;
   -webkit-margin: auto;
   -webkit-padding: 1rem;
   -webkit-display: flex;
@@ -570,8 +570,10 @@ body {
   -webkit-box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
   -webkit-box-sizing: border-box;
   -webkit-border: 70px solid transparent;
-  -webkit-background-attachment: fixed;
+  -webkit-background-attachment: fixed; */
   -webkit-border-image-source: url(./Images/Woodgrain.png) 30 round;
+  -moz-border-image-source: url(./Images/Woodgrain.png) 30 round;
+  -o-border-image-source: url(./Images/Woodgrain.png) 30 round;
 }
 
 /* @media screen and (min-width: 800px) {
