@@ -25,8 +25,8 @@ body {
 
 .menu {
   margin: auto;
-  background-image: url('https://res.cloudinary.com/jes7078/image/upload/v1579718335/BreweryAPIPics/Mandolorian.gif');
-  /* background-image: url('https://media1.tenor.com/images/9cb177c1cd81f8f57a61fac78c6c55f4/tenor.gif?itemid=15570500'); */
+  /* background-image: url('https://res.cloudinary.com/jes7078/image/upload/v1579718335/BreweryAPIPics/Mandolorian.gif'); */
+  background-image: url(../src/Images/Mandolorian.gif);
   color: transparent;
   background-clip: text;
   text-align: center;
@@ -535,7 +535,6 @@ body {
 
 .beerListBackground {
   width: 90%;
-  /* border-radius: */
   margin: auto;
   padding: 0;
   margin-top: 1rem;
