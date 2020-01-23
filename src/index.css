@@ -551,21 +551,21 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  backdrop-filter: blur(10px);
   justify-content: center;
+  backdrop-filter: blur(10px);
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
 }
 
 @media screen and (min-width: 800px) {
   .beerList {
-    box-sizing: border-box;
     border: 70px solid transparent;
     background-attachment: fixed;
     border-image: url(./Images/Woodgrain.png) 30 round;
-    -webkit-border-image: url(./Images/Woodgrain.png) 30 round;
-    -o-border-image: url(./Images/Woodgrain.png) 30 round;
-    -moz-border-image: url(./Images/Woodgrain.png) 30 round;
+    /*webkit*/
+    -webkit-border: 70px solid transparent;
+    -webkit-background-attachment: fixed;
+    -webkit-border-image-source: url(./Images/Woodgrain.png) 30 round;
   }
 }
 
@@ -574,9 +574,10 @@ body {
     border: 50px solid transparent;
     background-attachment: fixed;
     border-image: url(./Images/Woodgrain.png) 30 round;
-    -webkit-border-image: url(./Images/Woodgrain.png) 30 round;
-    -o-border-image: url(./Images/Woodgrain.png) 30 round;
-    -moz-border-image: url(./Images/Woodgrain.png) 30 round;
+    /*webkit*/
+    -webkit-border: 50px solid transparent;
+    -webkit-background-attachment: fixed;
+    -webkit-border-image-source: url(./Images/Woodgrain.png) 30 round;
   }
 }
 
@@ -585,9 +586,10 @@ body {
     border: 30px solid transparent;
     background-attachment: fixed;
     border-image: url(./Images/Woodgrain.png) 30 round;
-    -webkit-border-image: url(./Images/Woodgrain.png) 30 round;
-    -o-border-image: url(./Images/Woodgrain.png) 30 round;
-    -moz-border-image: url(./Images/Woodgrain.png) 30 round;
+    /*webkit*/
+    -webkit-border: 30px solid transparent;
+    -webkit-background-attachment: fixed;
+    -webkit-border-image-source: url(./Images/Woodgrain.png) 30 round;
   }
 }
 
