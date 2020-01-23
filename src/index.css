@@ -587,7 +587,7 @@ body {
       30 round; */
     /* border-image: url('https://res.cloudinary.com/jes7078/image/upload/v1579718555/BreweryAPIPics/Woodgrain.jpg')
 			30 round; */
-    border-image: url(../src/Images/Woodgrain.jpg) 30 round;
+    border-image: url(../public/Images/Woodgrain.jpg) 30 round;
   }
 }
 
