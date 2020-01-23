@@ -571,7 +571,7 @@ body {
   -webkit-box-sizing: border-box;
   -webkit-border: 70px solid transparent;
   -webkit-background-attachment: fixed; */
-  -webkit-border-image-source: url(./Images/Woodgrain.png) 30 round;
+  -webkit-border-image: url(./Images/Woodgrain.png) 30 round;
   -moz-border-image-source: url(./Images/Woodgrain.png) 30 round;
   -o-border-image-source: url(./Images/Woodgrain.png) 30 round;
 }
