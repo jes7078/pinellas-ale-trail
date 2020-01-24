@@ -32,7 +32,7 @@ const HomePage = () => {
 				} else {
 					setStyleNumber(Math.floor(Math.random() * style.length))
 				}
-			}, 10000)
+			}, 15000)
 			return () => {
 				clearInterval(interval2)
 			}
@@ -67,7 +67,7 @@ const HomePage = () => {
 				} else {
 					setLocalStyleNumber(Math.floor(Math.random() * localStyles.length))
 				}
-			}, 3000)
+			}, 5000)
 			return () => {
 				clearInterval(interval3)
 			}
