@@ -5,6 +5,8 @@ import Dropzone from '../components/Dropzone'
 import ImageList from '../components/ImageList'
 import cuid from 'cuid'
 
+import EXIF from 'exif-js'
+
 const AdminBeer = () => {
   const [breweryList, setBreweryList] = useState([])
   const [beerStyleList, setBeerStyleList] = useState([])
@@ -167,19 +169,25 @@ const AdminBeer = () => {
           { id: cuid(), src: e.target.result },
         ])
       }
-      reader.readAsDataURL(file)
-      submit(file)
-      return file
+      EXIF.getData(file, async function() {
+        var orientation = EXIF.getTag(this, 'Orientation')
+        console.log({ this: this })
+        reader.readAsDataURL(file)
+        submit(file, orientation)
+        return file
+      })
     })
   }, [])
 
-  const submit = async file => {
+  const submit = async (file, orientation) => {
     const formData = new FormData()
+
     formData.append('file', file)
-    const resp = await axios.post(
-      'https://pinellas-ale-trail.herokuapp.com/api/Image',
-      formData
-    )
+    let url = 'https://pinellas-ale-trail.herokuapp.com/api/Image'
+    if (orientation) {
+      url += `?orientation=${orientation}`
+    }
+    const resp = await axios.post(url, formData)
     setBeer(prevBeer => ({
       ...prevBeer,
       beerURL: resp.data.image.url,

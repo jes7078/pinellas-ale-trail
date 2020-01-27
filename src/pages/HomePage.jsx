@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Menu from '../components/Menu'
 import axios from 'axios'
 
+import EXIF from 'exif-js'
+
 const HomePage = () => {
   const [styleNumber, setStyleNumber] = useState(0)
   const [localStyleNumber, setLocalStyleNumber] = useState(0)
