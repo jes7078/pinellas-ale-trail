@@ -1,980 +1,981 @@
 :root {
-  font: 16px / 1 sans-serif;
+	font: 16px / 1 sans-serif;
 }
 
 html {
-  height: 100%;
-  width: 100%;
-  background: #fffcf9;
-  margin: 0;
+	height: 100%;
+	width: 100%;
+	background: #fffcf9;
+	margin: 0;
 }
 
 body {
-  min-height: 100%;
-  min-width: 100%;
-  margin: 0;
-  background: #fffcf9;
+	min-height: 100%;
+	min-width: 100%;
+	margin: 0;
+	background: #fffcf9;
 }
 
 .homePage {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 /********************************* Menu */
 
 .menu {
-  margin: auto;
-  /* background-image: url('https://res.cloudinary.com/jes7078/image/upload/v1579718335/BreweryAPIPics/Mandolorian.gif'); */
-  background-image: url(../src/Images/Mandolorian.gif);
-  color: transparent;
-  background-clip: text;
-  text-align: center;
-  background-position: center;
-  width: 80%;
-  margin-top: 0.5rem;
+	margin: auto;
+	/* background-image: url('https://res.cloudinary.com/jes7078/image/upload/v1579718335/BreweryAPIPics/Mandolorian.gif'); */
+	background-image: url(../src/Images/Mandolorian.gif);
+	color: transparent;
+	background-clip: text;
+	text-align: center;
+	background-position: center;
+	width: 80%;
+	margin-top: 0.5rem;
 }
 
 #menuTitle {
-  text-align: center;
-  margin: 0;
-  font-family: 'Milonga', cursive;
+	text-align: center;
+	margin: 0;
+	font-family: 'Milonga', cursive;
 }
 
 @media screen and (min-width: 1550px) {
-  #menuTitle {
-    font-size: 8rem;
-  }
+	#menuTitle {
+		font-size: 8rem;
+	}
 }
 
 @media screen and (min-width: 1158px) and (max-width: 1549px) {
-  #menuTitle {
-    font-size: 6rem;
-  }
+	#menuTitle {
+		font-size: 6rem;
+	}
 }
 
 @media screen and (min-width: 774px) and (max-width: 1157px) {
-  #menuTitle {
-    font-size: 4rem;
-  }
+	#menuTitle {
+		font-size: 4rem;
+	}
 }
 
 @media screen and (min-width: 585px) and (max-width: 773px) {
-  #menuTitle {
-    font-size: 3rem;
-  }
+	#menuTitle {
+		font-size: 3rem;
+	}
 }
 
 @media screen and (min-width: 426px) and (max-width: 584px) {
-  #menuTitle {
-    font-size: 2.2rem;
-  }
+	#menuTitle {
+		font-size: 2.2rem;
+	}
 }
 
 @media screen and (min-width: 351px) and (max-width: 425px) {
-  #menuTitle {
-    font-size: 1.8rem;
-  }
+	#menuTitle {
+		font-size: 1.8rem;
+	}
 }
 
 @media screen and (max-width: 350px) {
-  #menuTitle {
-    font-size: 1.4rem;
-  }
+	#menuTitle {
+		font-size: 1.4rem;
+	}
 }
 
 .menuLinks ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: space-around;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	justify-content: space-around;
 }
 
 .menuLinks li {
-  font-family: 'Milonga', cursive;
-  border: 1px solid black;
-  background-color: rgb(246, 229, 202);
+	font-family: 'Milonga', cursive;
+	border: 1px solid black;
+	background-color: rgb(246, 229, 202);
 }
 
 .menuLinks li:hover {
-  transition: 0.8s;
-  background: red;
+	transition: 0.8s;
+	background: red;
 }
 
 @media screen and (min-width: 1550px) {
-  .menuLinks li {
-    margin: 1rem;
-    padding: 1rem;
-    width: 10rem;
-    display: inline-flex;
-    flex-direction: row;
-  }
+	.menuLinks li {
+		margin: 1rem;
+		padding: 1rem;
+		width: 10rem;
+		display: inline-flex;
+		flex-direction: row;
+	}
 }
 
 @media screen and (min-width: 1158px) and (max-width: 1549px) {
-  .menuLinks li {
-    margin: 1rem;
-    padding: 1rem;
-    width: 8rem;
-    display: inline-flex;
-    flex-direction: row;
-  }
+	.menuLinks li {
+		margin: 1rem;
+		padding: 1rem;
+		width: 8rem;
+		display: inline-flex;
+		flex-direction: row;
+	}
 }
 
 @media screen and (min-width: 800px) and (max-width: 1157px) {
-  .menuLinks li {
-    margin: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    width: 8rem;
-    display: inline-flex;
-    flex-direction: row;
-  }
+	.menuLinks li {
+		margin: 1rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 8rem;
+		display: inline-flex;
+		flex-direction: row;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .menuLinks li {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    width: 350px;
-    display: flex;
-    height: 2rem;
-    flex-direction: column;
-  }
+	.menuLinks li {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+		padding: 0.5rem;
+		width: 350px;
+		display: flex;
+		height: 2rem;
+		flex-direction: column;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .menuLinks li {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    width: 200px;
-    height: 2rem;
-    display: flex;
-    flex-direction: column;
-  }
+	.menuLinks li {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+		padding: 0.5rem;
+		width: 200px;
+		height: 2rem;
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .menuLinks a {
-  text-decoration: none;
-  color: black;
-  margin: auto;
+	text-decoration: none;
+	color: black;
+	margin: auto;
 }
 @media screen and (min-width: 1550px) {
-  .menuLinks a {
-    font-size: 1.5rem;
-  }
+	.menuLinks a {
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (min-width: 774px) and (max-width: 1549px) {
-  .menuLinks a {
-    font-size: 1.2rem;
-  }
+	.menuLinks a {
+		font-size: 1.2rem;
+	}
 }
 
 @media screen and (max-width: 773px) {
-  .menuLinks a {
-    font-size: 1.1rem;
-  }
+	.menuLinks a {
+		font-size: 1.1rem;
+	}
 }
 
 /*-----------Home Page Featured Style Section------------------*/
 
 .borderedTitle {
-  text-align: center;
-  color: black;
-  font-family: 'Milonga', cursive;
-  width: 80%;
-  margin: auto;
-  border-top: 2.5px solid black;
-  border-bottom: 2.5px solid black;
-  padding: 1rem;
+	text-align: center;
+	color: black;
+	font-family: 'Milonga', cursive;
+	width: 80%;
+	margin: auto;
+	border-top: 2.5px solid black;
+	border-bottom: 2.5px solid black;
+	padding: 1rem;
 }
 
 @media screen and (min-width: 1550px) {
-  .borderedTitle {
-    font-size: 4rem;
-  }
+	.borderedTitle {
+		font-size: 4rem;
+	}
 }
 
 @media screen and (min-width: 774px) and (max-width: 1549px) {
-  .borderedTitle {
-    font-size: 3rem;
-  }
+	.borderedTitle {
+		font-size: 3rem;
+	}
 }
 
 @media screen and (min-width: 478px) and (max-width: 773px) {
-  .borderedTitle {
-    font-size: 2rem;
-  }
+	.borderedTitle {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (max-width: 477px) {
-  .borderedTitle {
-    font-size: 1.2rem;
-  }
+	.borderedTitle {
+		font-size: 1.2rem;
+	}
 }
 
 .featuredSection {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  color: black;
-  text-align: center;
-  width: 80%;
-  margin-top: 0;
-  margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	text-align: center;
+	width: 80%;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 #styleTitle {
-  color: black;
-  font-family: 'Vollkorn', serif;
-  padding: 1rem;
-  margin: 0;
+	color: black;
+	font-family: 'Vollkorn', serif;
+	padding: 1rem;
+	margin: 0;
 }
 
 @media screen and (min-width: 1550px) {
-  #styleTitle {
-    font-size: 3rem;
-  }
+	#styleTitle {
+		font-size: 3rem;
+	}
 }
 
 @media screen and (min-width: 774px) and (max-width: 1549px) {
-  #styleTitle {
-    font-size: 2.5rem;
-  }
+	#styleTitle {
+		font-size: 2.5rem;
+	}
 }
 
 @media screen and (min-width: 400px) and (max-width: 773px) {
-  #styleTitle {
-    font-size: 2rem;
-  }
+	#styleTitle {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (max-width: 399px) {
-  #styleTitle {
-    font-size: 1.8rem;
-  }
+	#styleTitle {
+		font-size: 1.8rem;
+	}
 }
 
 #styleDescription {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 0;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 0;
 }
 
 @media screen and (min-width: 1550px) {
-  #styleDescription {
-    font-size: 2rem;
-  }
+	#styleDescription {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 400px) and (max-width: 1549px) {
-  #styleDescription {
-    font-size: 1.5rem;
-  }
+	#styleDescription {
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (max-width: 399px) {
-  #styleDescription {
-    font-size: 1.2rem;
-  }
+	#styleDescription {
+		font-size: 1.2rem;
+	}
 }
 
 /*-----------Home Page Featured Style Local Beers----------------*/
 
 #featuredStyleLocalBeersPicture {
-  width: 96%;
-  border-radius: 10px;
-  object-fit: contain;
-  margin: auto;
-  margin-top: 1rem;
+	width: 96%;
+	border-radius: 10px;
+	object-fit: contain;
+	margin: auto;
+	margin-top: 1rem;
+	border: 2px solid red;
 }
 
 @media screen and (min-width: 1550px) {
-  #featuredStyleLocalBeersPicture {
-    height: 35rem;
-  }
+	#featuredStyleLocalBeersPicture {
+		height: 35rem;
+	}
 }
 
 @media screen and (min-width: 550px) and (max-width: 1549px) {
-  #featuredStyleLocalBeersPicture {
-    height: 25rem;
-  }
+	#featuredStyleLocalBeersPicture {
+		height: 25rem;
+	}
 }
 
 @media screen and (max-width: 549px) {
-  #featuredStyleLocalBeersPicture {
-    height: 20rem;
-  }
+	#featuredStyleLocalBeersPicture {
+		height: 20rem;
+	}
 }
 .featuredStyleLocalBeersHeader {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  justify-content: center;
-  margin-top: 0.5rem;
-  margin-left: 0;
-  margin-right: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	justify-content: center;
+	margin-top: 0.5rem;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .featuredStyleLocalBeersHeader h1 {
-  padding: 0;
-  margin: 0;
-  color: black;
-  font-family: 'Vollkorn', serif;
+	padding: 0;
+	margin: 0;
+	color: black;
+	font-family: 'Vollkorn', serif;
 }
 @media screen and (min-width: 1550px) {
-  .featuredStyleLocalBeersHeader h1 {
-    font-size: 3rem;
-  }
+	.featuredStyleLocalBeersHeader h1 {
+		font-size: 3rem;
+	}
 }
 
 @media screen and (min-width: 400px) and (max-width: 1549px) {
-  .featuredStyleLocalBeersHeader h1 {
-    font-size: 2rem;
-  }
+	.featuredStyleLocalBeersHeader h1 {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (max-width: 399px) {
-  .featuredStyleLocalBeersHeader h1 {
-    font-size: 1.2rem;
-  }
+	.featuredStyleLocalBeersHeader h1 {
+		font-size: 1.2rem;
+	}
 }
 
 #featuredBeer {
-  margin-right: 0.5rem;
+	margin-right: 0.5rem;
 }
 #featuredBrewery {
-  margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 /*******************************Brewery Map Page */
 
 .breweryList ul {
-  margin: auto;
-  padding: 0;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+	margin: auto;
+	padding: 0;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
 }
 
 .breweryList li {
-  margin: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  list-style: none;
-  height: 2rem;
-  background-color: rgb(246, 229, 202);
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	list-style: none;
+	height: 2rem;
+	background-color: rgb(246, 229, 202);
+	border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .breweryList li:hover {
-  transition: 0.8s;
-  background: red;
+	transition: 0.8s;
+	background: red;
 }
 
 @media screen and (min-width: 800px) {
-  .breweryList li {
-    width: 600px;
-  }
+	.breweryList li {
+		width: 600px;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .breweryList li {
-    width: 350px;
-  }
+	.breweryList li {
+		width: 350px;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .breweryList li {
-    width: 200px;
-  }
+	.breweryList li {
+		width: 200px;
+	}
 }
 
 .breweryList li a {
-  text-decoration: none;
-  justify-content: center;
-  color: black;
-  padding: 0.25rem;
-  text-align: center;
-  margin: auto;
+	text-decoration: none;
+	justify-content: center;
+	color: black;
+	padding: 0.25rem;
+	text-align: center;
+	margin: auto;
 }
 
 @media screen and (min-width: 800px) {
-  .breweryList li a {
-    font-size: 2rem;
-  }
+	.breweryList li a {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .breweryList li a {
-    font-size: 1.4rem;
-  }
+	.breweryList li a {
+		font-size: 1.4rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .breweryList li a {
-    font-size: 1rem;
-  }
+	.breweryList li a {
+		font-size: 1rem;
+	}
 }
 
 #map {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  margin-bottom: 2rem;
-  height: 40rem;
-  margin-left: auto;
-  margin-right: auto;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	margin-bottom: 2rem;
+	height: 40rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #map > div {
-  border: 2px solid black;
+	border: 2px solid black;
 }
 
 .fa-map-pin {
-  color: red;
+	color: red;
 }
 
 .marker {
-  color: red;
+	color: red;
 }
 
 /*------Breweries Page------------*/
 
 #featuredBeerTitle {
-  padding: 0;
-  margin: 1rem;
-  text-align: center;
-  font-size: 3rem;
-  color: black;
-  font-family: 'Vollkorn', serif;
+	padding: 0;
+	margin: 1rem;
+	text-align: center;
+	font-size: 3rem;
+	color: black;
+	font-family: 'Vollkorn', serif;
 }
 
 @media screen and (min-width: 800px) {
-  #featuredBeerTitle {
-    font-size: 3rem;
-  }
+	#featuredBeerTitle {
+		font-size: 3rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  #featuredBeerTitle {
-    font-size: 2rem;
-  }
+	#featuredBeerTitle {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  #featuredBeerTitle {
-    font-size: 1.5rem;
-  }
+	#featuredBeerTitle {
+		font-size: 1.5rem;
+	}
 }
 
 #breweryBeerPicture {
-  width: 96%;
-  border-radius: 10px;
-  object-fit: contain;
-  margin: auto;
+	width: 96%;
+	border-radius: 10px;
+	object-fit: contain;
+	margin: auto;
 }
 
 @media screen and (min-width: 800px) {
-  #breweryBeerPicture {
-    height: 30rem;
-  }
+	#breweryBeerPicture {
+		height: 30rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  #breweryBeerPicture {
-    height: 20rem;
-  }
+	#breweryBeerPicture {
+		height: 20rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  #breweryBeerPicture {
-    height: 10rem;
-  }
+	#breweryBeerPicture {
+		height: 10rem;
+	}
 }
 
 .breweryPagePictureFooter {
-  color: black;
-  margin: auto;
-  font-family: 'Vollkorn', serif;
+	color: black;
+	margin: auto;
+	font-family: 'Vollkorn', serif;
 }
 
 @media screen and (min-width: 800px) {
-  .breweryPagePictureFooter {
-    font-size: 2rem;
-  }
+	.breweryPagePictureFooter {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .breweryPagePictureFooter {
-    font-size: 1.5rem;
-  }
+	.breweryPagePictureFooter {
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .breweryPagePictureFooter {
-    font-size: 1rem;
-  }
+	.breweryPagePictureFooter {
+		font-size: 1rem;
+	}
 }
 
 .beerListBackground {
-  width: 90%;
-  margin: auto;
-  padding: 0;
-  margin-top: 1rem;
-  margin-bottom: 0;
-  background-color: black;
-  background-image: url(./Images/Woodgrain.png);
-  height: 100%;
-  border: solid transparent;
+	width: 90%;
+	margin: auto;
+	padding: 0;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	background-color: black;
+	background-image: url(./Images/Woodgrain.png);
+	height: 100%;
+	border: solid transparent;
 }
 
 .beerList {
-  background-color: black;
-  border-radius: 20px;
-  width: 80%;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: border-box;
+	background-color: black;
+	border-radius: 20px;
+	width: 80%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	box-sizing: border-box;
 }
 
 .beerList ul {
-  column-gap: 1rem;
-  margin-top: 1rem;
-  padding: 0.25rem;
-  list-style: none;
-  border-radius: 10px;
-  margin-right: 1rem;
-  border-radius: 10 px;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.4);
-  width: 45%;
+	column-gap: 1rem;
+	margin-top: 1rem;
+	padding: 0.25rem;
+	list-style: none;
+	border-radius: 10px;
+	margin-right: 1rem;
+	border-radius: 10 px;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.4);
+	width: 45%;
 }
 
 .beerList li {
-  display: inline-block;
-  color: #dcdcdc;
-  display: inline-block;
-  padding-bottom: 0.25rem;
-  padding-top: 0.25rem;
-  width: 98%;
-  text-align: center;
+	display: inline-block;
+	color: #dcdcdc;
+	display: inline-block;
+	padding-bottom: 0.25rem;
+	padding-top: 0.25rem;
+	width: 98%;
+	text-align: center;
 }
 
 @media screen and (min-width: 850px) {
-  .beerList li {
-    font-size: 1.3rem;
-  }
+	.beerList li {
+		font-size: 1.3rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 849px) {
-  .beerList li {
-    font-size: 1rem;
-  }
+	.beerList li {
+		font-size: 1rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .beerList li {
-    font-size: 0.75rem;
-  }
+	.beerList li {
+		font-size: 0.75rem;
+	}
 }
 
 /*-------------------Admin Page-----------------------------*/
 
 .adminLinks ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 1rem;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 1rem;
 }
 
 .adminLinks li {
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Milonga', cursive;
-  border: 1px solid black;
-  background-color: rgb(246, 229, 202);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Milonga', cursive;
+	border: 1px solid black;
+	background-color: rgb(246, 229, 202);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 800px) {
-  .adminLinks li {
-    width: 25rem;
-  }
+	.adminLinks li {
+		width: 25rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .adminLinks li {
-    width: 23rem;
-  }
+	.adminLinks li {
+		width: 23rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .adminLinks li {
-    width: 13rem;
-  }
+	.adminLinks li {
+		width: 13rem;
+	}
 }
 
 .adminLinks a {
-  text-decoration: none;
-  color: black;
-  background-position: center;
-  justify-self: center;
-  padding: 0.25rem;
+	text-decoration: none;
+	color: black;
+	background-position: center;
+	justify-self: center;
+	padding: 0.25rem;
 }
 
 .adminLinks li:hover {
-  transition: 0.8s;
-  background: red;
+	transition: 0.8s;
+	background: red;
 }
 
 @media screen and (min-width: 800px) {
-  .adminLinks a {
-    font-size: 1.5rem;
-  }
+	.adminLinks a {
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .adminLinks a {
-    font-size: 1.2rem;
-  }
+	.adminLinks a {
+		font-size: 1.2rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .adminLinks a {
-    font-size: 1rem;
-  }
+	.adminLinks a {
+		font-size: 1rem;
+	}
 }
 
 /*--------Add Update Delete Brewery----------------*/
 
 .addBreweryInputSection form {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .addBreweryInputSection label {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
 }
 
 @media screen and (min-width: 800px) {
-  .addBreweryInputSection label {
-    font-size: 2rem;
-  }
+	.addBreweryInputSection label {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .addBreweryInputSection label {
-    font-size: 1.5rem;
-  }
+	.addBreweryInputSection label {
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .addBreweryInputSection label {
-    font-size: 1.2rem;
-  }
+	.addBreweryInputSection label {
+		font-size: 1.2rem;
+	}
 }
 
 .addBreweryInputSection input {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  height: 3rem;
-  padding: 0;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	height: 3rem;
+	padding: 0;
 }
 
 @media screen and (min-width: 1680px) {
-  .addBreweryInputSection input {
-    width: 100rem;
-    font-size: 2rem;
-  }
+	.addBreweryInputSection input {
+		width: 100rem;
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1680px) {
-  .addBreweryInputSection input {
-    width: 70rem;
-    font-size: 2rem;
-  }
+	.addBreweryInputSection input {
+		width: 70rem;
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 880px) and (max-width: 1199px) {
-  .addBreweryInputSection input {
-    width: 50rem;
-    font-size: 2rem;
-  }
+	.addBreweryInputSection input {
+		width: 50rem;
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 800px) and (max-width: 879px) {
-  .addBreweryInputSection input {
-    width: 40rem;
-    font-size: 2rem;
-  }
+	.addBreweryInputSection input {
+		width: 40rem;
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .addBreweryInputSection input {
-    width: 30rem;
-    font-size: 1.5rem;
-  }
+	.addBreweryInputSection input {
+		width: 30rem;
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (min-width: 415px) and (max-width: 499px) {
-  .addBreweryInputSection input {
-    width: 25rem;
-    font-size: 1.5rem;
-  }
+	.addBreweryInputSection input {
+		width: 25rem;
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (max-width: 414px) {
-  .addBreweryInputSection input {
-    width: 20rem;
-    font-size: 1.2rem;
-  }
+	.addBreweryInputSection input {
+		width: 20rem;
+		font-size: 1.2rem;
+	}
 }
 
 .addBreweryButtons {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  padding: 0;
-  margin-bottom: 2rem;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	padding: 0;
+	margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 800px) {
-  .addBreweryButtons {
-    flex-direction: row;
-  }
+	.addBreweryButtons {
+		flex-direction: row;
+	}
 }
 
 @media screen and (max-width: 799px) {
-  .addBreweryButtons {
-    flex-direction: column;
-  }
+	.addBreweryButtons {
+		flex-direction: column;
+	}
 }
 
 .addButton {
-  font-family: 'Milonga', cursive;
-  border: 1px solid black;
-  background-color: rgb(246, 229, 202);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+	font-family: 'Milonga', cursive;
+	border: 1px solid black;
+	background-color: rgb(246, 229, 202);
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 800px) {
-  .addButton {
-    margin-right: 1rem;
-    width: 5rem;
-    font-size: 1.5rem;
-    width: 7rem;
-  }
+	.addButton {
+		margin-right: 1rem;
+		width: 5rem;
+		font-size: 1.5rem;
+		width: 7rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .addButton {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    width: 350px;
-  }
+	.addButton {
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		width: 350px;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .addButton {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    width: 200px;
-  }
+	.addButton {
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		width: 200px;
+	}
 }
 
 .addButton:hover {
-  transition: 0.8s;
-  background: red;
+	transition: 0.8s;
+	background: red;
 }
 
 .addCurrentBreweriesList {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 1rem;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 1rem;
 }
 .addBreweryList {
-  display: flex;
-  margin-top: 1rem;
-  padding: 0;
-  margin: auto;
+	display: flex;
+	margin-top: 1rem;
+	padding: 0;
+	margin: auto;
 }
 
 @media screen and (min-width: 1100px) {
-  .addBreweryList {
-    flex-direction: row;
-    width: 50rem;
-  }
+	.addBreweryList {
+		flex-direction: row;
+		width: 50rem;
+	}
 }
 
 @media screen and (max-width: 1099px) {
-  .addBreweryList {
-    flex-direction: column;
-  }
+	.addBreweryList {
+		flex-direction: column;
+	}
 }
 
 .addCurrentBreweriesList ul {
-  list-style: none;
-  margin: auto;
-  padding: 0;
+	list-style: none;
+	margin: auto;
+	padding: 0;
 }
 
 .addBreweryList li {
-  border: 1px solid #fffcf9;
-  vertical-align: middle;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  text-align: center;
+	border: 1px solid #fffcf9;
+	vertical-align: middle;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
 }
 
 @media screen and (min-width: 1100px) {
-  .addBreweryList li {
-    margin-right: 2rem;
-    width: 25rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-  }
+	.addBreweryList li {
+		margin-right: 2rem;
+		width: 25rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		font-size: 2rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 1099px) {
-  .addBreweryList li {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 2rem;
-  }
+	.addBreweryList li {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 2rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .addBreweryList li {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.5rem;
-  }
+	.addBreweryList li {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 1.5rem;
+	}
 }
 
 .addBreweryList button {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-family: 'Milonga', cursive;
-  border: 1px solid black;
-  background-color: rgb(246, 229, 202);
-  margin-top: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-family: 'Milonga', cursive;
+	border: 1px solid black;
+	background-color: rgb(246, 229, 202);
+	margin-top: 1rem;
 }
 
 .addBreweryList button:hover {
-  transition: 0.8s;
-  background: red;
+	transition: 0.8s;
+	background: red;
 }
 
 @media screen and (min-width: 1100px) {
-  .addBreweryList button {
-    width: 15rem;
-    margin-right: 1rem;
-    margin-left: 7rem;
-    height: 6rem;
-    font-size: 1.5rem;
-  }
+	.addBreweryList button {
+		width: 15rem;
+		margin-right: 1rem;
+		margin-left: 7rem;
+		height: 6rem;
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (min-width: 500px) and (max-width: 1099px) {
-  .addBreweryList button {
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 6rem;
-    font-size: 1.5rem;
-  }
+	.addBreweryList button {
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 6rem;
+		font-size: 1.5rem;
+	}
 }
 
 @media screen and (max-width: 499px) {
-  .addBreweryList button {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 5rem;
-    font-size: 1.1rem;
-  }
+	.addBreweryList button {
+		width: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 5rem;
+		font-size: 1.1rem;
+	}
 }
 
 /*------------------Add Beer Page Image Component--------------*/
 
 .dropzone-content {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 .dropzone {
-  background-color: rgb(246, 229, 202);
-  border: 10px dashed black;
+	background-color: rgb(246, 229, 202);
+	border: 10px dashed black;
 }
 
 .dropzone-active {
-  border: 10px dashed red;
-  background-color: aqua;
+	border: 10px dashed red;
+	background-color: aqua;
 }
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 .onDropSection {
-  height: 24rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+	height: 24rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .onDropSection img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  height: 10rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 10rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
