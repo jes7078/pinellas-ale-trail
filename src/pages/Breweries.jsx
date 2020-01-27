@@ -56,7 +56,8 @@ const Breweries = props => {
   }, [beer, nullStyle, props.location.state])
 
   const getBeers = async () => {
-    const resp = await axios.get('https://pinellas-ale-trail.herokuapp.com/api/Beers')
+    // const resp = await axios.get('https://pinellas-ale-trail.herokuapp.com/api/Beers')
+    const resp = await axios.get('https://localhost:5001/api/Beers')
     setBeer(resp.data)
   }
 

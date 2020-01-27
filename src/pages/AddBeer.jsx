@@ -65,6 +65,7 @@ const AdminBeer = () => {
     const resp = await axios.get(
       'https://pinellas-ale-trail.herokuapp.com/api/Beers'
     )
+
     setBeerList(resp.data)
   }
 
