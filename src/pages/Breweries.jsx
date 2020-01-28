@@ -8,7 +8,6 @@ const Breweries = props => {
   const [beerNumber, setBeerNumber] = useState(0)
   const [beer, setBeer] = useState([])
   const [needToRedirect, setNeedToRedirect] = useState(false)
-  const [imageUrl, setImageUrl] = useState()
   const [nullStyle] = useState([
     {
       name: 'There are no local beers',
@@ -81,23 +80,7 @@ const Breweries = props => {
           <h1 id="featuredBeerTitle">Random Featured Beer</h1>
 
           <section className="featuredSection">
-            <section
-              id="backcontainer"
-              styles={{
-                backgroundImage: `url(${imageUrl})`,
-              }}
-            >
-              <section
-                id="backcontainer"
-                style={secStyle && secStyle}
-              ></section>
-              {/* <img src={imageUrl} /> */}
-            </section>
-            {/* <img
-              id="breweryBeerPicture"
-              alt="brewery beer"
-              src={localStyles[beerNumber] && localStyles[beerNumber].beerURL}
-            /> */}
+            <section id="backcontainer" style={secStyle && secStyle}></section>
             <section className="breweryPagePictureFooter">
               <h1>
                 Name: {localStyles[beerNumber] && localStyles[beerNumber].name}

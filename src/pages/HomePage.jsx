@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Menu from '../components/Menu'
 import axios from 'axios'
-
 import EXIF from 'exif-js'
 
 const HomePage = () => {
@@ -20,6 +19,11 @@ const HomePage = () => {
         'https://res.cloudinary.com/jes7078/image/upload/v1579122905/BreweryAPIPics/Other/noBeer.jpg',
     },
   ])
+
+  const secMainStyle = {
+    backgroundImage: `url(${localStyles[localStyleNumber] &&
+      localStyles[localStyleNumber].beerURL})`,
+  }
 
   useEffect(() => {
     getStyles()
@@ -109,14 +113,10 @@ const HomePage = () => {
               localStyles[localStyleNumber].breweries.name}
           </h1>
         </section>
-        <img
-          id="featuredStyleLocalBeersPicture"
-          src={
-            localStyles[localStyleNumber] &&
-            localStyles[localStyleNumber].beerURL
-          }
-          alt="Local Featured Styled Beer"
-        />
+        <section
+          id="backcontainer"
+          style={secMainStyle && secMainStyle}
+        ></section>
       </section>
     </section>
   )

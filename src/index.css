@@ -485,35 +485,34 @@ body {
   }
 }
 
-#breweryBeerPicture {
+/* #breweryBeerPicture {
   width: 96%;
   border-radius: 10px;
   object-fit: contain;
   margin: auto;
   image-orientation: from-image;
-}
+} */
 
 #backcontainer {
-  height: 30rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 @media screen and (min-width: 800px) {
-  #breweryBeerPicture {
+  #backcontainer {
     height: 30rem;
   }
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  #breweryBeerPicture {
+  #backcontainer {
     height: 20rem;
   }
 }
 
 @media screen and (max-width: 499px) {
-  #breweryBeerPicture {
+  #backcontainer {
     height: 10rem;
   }
 }
