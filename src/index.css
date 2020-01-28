@@ -25,7 +25,6 @@ body {
 
 .menu {
   margin: auto;
-  /* background-image: url('https://res.cloudinary.com/jes7078/image/upload/v1579718335/BreweryAPIPics/Mandolorian.gif'); */
   background-image: url(../src/Images/Mandolorian.gif);
   color: transparent;
   background-clip: text;
@@ -913,7 +912,7 @@ body {
 
 @media screen and (min-width: 1100px) {
   .addBreweryList button {
-    width: 15rem;
+    width: 20rem;
     margin-right: auto;
     margin-left: auto;
     height: 6rem;
@@ -923,7 +922,7 @@ body {
 
 @media screen and (min-width: 500px) and (max-width: 1099px) {
   .addBreweryList button {
-    width: 300px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
     height: 6rem;
@@ -933,7 +932,7 @@ body {
 
 @media screen and (max-width: 499px) {
   .addBreweryList button {
-    width: 150px;
+    width: 250px;
     margin-left: auto;
     margin-right: auto;
     height: 5rem;
@@ -965,7 +964,6 @@ body {
   text-align: center;
 }
 .onDropSection {
-  height: 24rem;
   margin-left: auto;
   margin-right: auto;
   width: 50%;

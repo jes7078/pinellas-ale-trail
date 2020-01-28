@@ -37,7 +37,6 @@ const AdminBeer = () => {
       ...prevBeer,
       breweriesId: brewery.id,
       breweriesName: brewery.name,
-      //looking here--------------------------------------------------------------//
     }))
     setBrewerySelector(true)
   }
@@ -256,7 +255,6 @@ const AdminBeer = () => {
             value={beer.beerStyleStyle}
             placeholder="Enter Beer Style Id"
             disabled
-            // onChange={updateBeerObject}
           />
           <section className="addCurrentBreweriesList">
             {beerStyleSelector ? (
@@ -285,7 +283,6 @@ const AdminBeer = () => {
               </ul>
             )}
           </section>
-          {/* //looking here--------------------------------------------------------------// */}
           <label>Brewery Id of Beer</label>
           <input
             name="breweriesId"
@@ -295,7 +292,6 @@ const AdminBeer = () => {
             value={beer.breweriesName}
             placeholder="Enter Brewery Id"
             disabled
-            // onChange={updateBeerObject}
           />
           <section className="addCurrentBreweriesList">
             {brewerySelector ? (
@@ -360,7 +356,6 @@ const AdminBeer = () => {
                 <button value={bee.id} onClick={() => selectIt(bee.id)}>
                   {bee.name}
                 </button>
-                {/* <li key={index}>{bee.name}</li> */}
               </section>
             )
           })}
