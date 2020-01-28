@@ -36,6 +36,8 @@ const AdminBeer = () => {
     setBeer(prevBeer => ({
       ...prevBeer,
       breweriesId: brewery.id,
+      breweriesName: brewery.name,
+      //looking here--------------------------------------------------------------//
     }))
     setBrewerySelector(true)
   }
@@ -45,6 +47,7 @@ const AdminBeer = () => {
     setBeer(prevBeer => ({
       ...prevBeer,
       beerStyleId: sty.id,
+      beerStyleStyle: sty.style,
     }))
     setBeerStyleSelector(true)
   }
@@ -94,6 +97,8 @@ const AdminBeer = () => {
       breweriesId: '',
     })
     setImages([])
+    setBrewerySelector(false)
+    setBeerStyleSelector(true)
   }
 
   const updateIt = async e => {
@@ -118,6 +123,8 @@ const AdminBeer = () => {
       breweriesId: '',
     })
     setImages([])
+    setBrewerySelector(false)
+    setBeerStyleSelector(true)
   }
 
   const deleteit = async (e, beer) => {
@@ -141,6 +148,8 @@ const AdminBeer = () => {
       breweriesId: '',
     })
     setImages([])
+    setBrewerySelector(false)
+    setBeerStyleSelector(true)
   }
 
   const createBreweryList = async () => {
@@ -234,11 +243,12 @@ const AdminBeer = () => {
           <input
             name="beerStyleId"
             className="inputBar"
-            type="number"
+            type="text"
             step="1"
-            value={beer.beerStyleId}
+            value={beer.beerStyleStyle}
             placeholder="Enter Beer Style Id"
-            onChange={updateBeerObject}
+            disabled
+            // onChange={updateBeerObject}
           />
           <section className="addCurrentBreweriesList">
             {beerStyleSelector ? (
@@ -267,16 +277,17 @@ const AdminBeer = () => {
               </ul>
             )}
           </section>
-
+          {/* //looking here--------------------------------------------------------------// */}
           <label>Brewery Id of Beer</label>
           <input
             name="breweriesId"
             className="inputBar"
-            type="number"
+            type="text"
             step="1"
-            value={beer.breweriesId}
+            value={beer.breweriesName}
             placeholder="Enter Brewery Id"
-            onChange={updateBeerObject}
+            disabled
+            // onChange={updateBeerObject}
           />
           <section className="addCurrentBreweriesList">
             {brewerySelector ? (
