@@ -228,7 +228,8 @@ body {
   margin-right: auto;
   color: black;
   text-align: center;
-  width: 80%;
+  /*changed*/
+  width: 100%;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -501,19 +502,19 @@ body {
 
 @media screen and (min-width: 800px) {
   #backcontainer {
-    height: 30rem;
+    height: 50rem;
   }
 }
 
 @media screen and (min-width: 500px) and (max-width: 799px) {
   #backcontainer {
-    height: 20rem;
+    height: 40rem;
   }
 }
 
 @media screen and (max-width: 499px) {
   #backcontainer {
-    height: 10rem;
+    height: 20rem;
   }
 }
 
