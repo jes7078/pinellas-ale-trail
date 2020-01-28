@@ -64,6 +64,8 @@ const AdminBeer = () => {
       abv: filterBeer[0].abv,
       beerStyleId: filterBeer[0].beerStyleId,
       breweriesId: filterBeer[0].breweriesId,
+      beerStyleStyle: filterBeer[0].beerStyle.style,
+      breweriesName: filterBeer[0].breweries.name,
     })
   }
 
@@ -95,6 +97,8 @@ const AdminBeer = () => {
       abv: '',
       beerStyleId: '',
       breweriesId: '',
+      breweriesName: '',
+      beerStyleStyle: '',
     })
     setImages([])
     setBrewerySelector(false)
@@ -121,6 +125,8 @@ const AdminBeer = () => {
       abv: '',
       beerStyleId: '',
       breweriesId: '',
+      breweriesName: '',
+      beerStyleStyle: '',
     })
     setImages([])
     setBrewerySelector(false)
@@ -146,6 +152,8 @@ const AdminBeer = () => {
       abv: '',
       beerStyleId: '',
       breweriesId: '',
+      breweriesName: '',
+      beerStyleStyle: '',
     })
     setImages([])
     setBrewerySelector(false)
