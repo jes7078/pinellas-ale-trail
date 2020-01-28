@@ -4,7 +4,6 @@ import Menu from '../components/Menu'
 import Dropzone from '../components/Dropzone'
 import ImageList from '../components/ImageList'
 import cuid from 'cuid'
-
 import EXIF from 'exif-js'
 
 const AdminBeer = () => {
@@ -12,6 +11,8 @@ const AdminBeer = () => {
   const [beerStyleList, setBeerStyleList] = useState([])
   const [beerList, setBeerList] = useState([])
   const [images, setImages] = useState([])
+  const [beerStyleSelector, setBeerStyleSelector] = useState(false)
+  const [brewerySelector, setBrewerySelector] = useState(false)
   const [beer, setBeer] = useState({
     id: 0,
     name: '',
@@ -36,6 +37,7 @@ const AdminBeer = () => {
       ...prevBeer,
       breweriesId: brewery.id,
     }))
+    setBrewerySelector(true)
   }
 
   const selectBeerStyleId = (e, sty) => {
@@ -44,6 +46,7 @@ const AdminBeer = () => {
       ...prevBeer,
       beerStyleId: sty.id,
     }))
+    setBeerStyleSelector(true)
   }
 
   const selectIt = id => {
@@ -182,7 +185,6 @@ const AdminBeer = () => {
 
   const submit = async (file, orientation) => {
     const formData = new FormData()
-
     formData.append('file', file)
     let url = 'https://pinellas-ale-trail.herokuapp.com/api/Image'
     if (orientation) {
@@ -201,17 +203,6 @@ const AdminBeer = () => {
       <h1 className="borderedTitle">Add, Update, or Delete a Beer Page</h1>
       <section className="addBreweryInputSection">
         <form>
-          <section className="addBreweryButtons">
-            <button className="addButton" onClick={addIt}>
-              Add
-            </button>
-            <button className="addButton" onClick={updateIt}>
-              Update
-            </button>
-            <button className="addButton" onClick={e => deleteit(e, beer)}>
-              Delete
-            </button>
-          </section>
           <label>Name of Beer</label>
           <input
             name="name"
@@ -250,21 +241,31 @@ const AdminBeer = () => {
             onChange={updateBeerObject}
           />
           <section className="addCurrentBreweriesList">
-            <ul>
-              {beerStyleList.map((sty, index) => {
-                return (
-                  <section key={index} className="addBreweryList">
-                    <button
-                      value={sty.id}
-                      onClick={e => selectBeerStyleId(e, sty)}
-                    >
-                      Select for Beer Style Id
-                    </button>
-                    <li key={index}>{sty.style}</li>
-                  </section>
-                )
-              })}
-            </ul>
+            {beerStyleSelector ? (
+              <section className="reset">
+                <button
+                  className="resetButton"
+                  onClick={() => setBeerStyleSelector(false)}
+                >
+                  Reset List
+                </button>
+              </section>
+            ) : (
+              <ul>
+                {beerStyleList.map((sty, index) => {
+                  return (
+                    <section key={index} className="addBreweryList">
+                      <button
+                        value={sty.id}
+                        onClick={e => selectBeerStyleId(e, sty)}
+                      >
+                        {sty.style}
+                      </button>
+                    </section>
+                  )
+                })}
+              </ul>
+            )}
           </section>
 
           <label>Brewery Id of Beer</label>
@@ -278,21 +279,31 @@ const AdminBeer = () => {
             onChange={updateBeerObject}
           />
           <section className="addCurrentBreweriesList">
-            <ul>
-              {breweryList.map((bre, index) => {
-                return (
-                  <section key={index} className="addBreweryList">
-                    <button
-                      value={bre.id}
-                      onClick={e => selectBreweriesId(e, bre)}
-                    >
-                      Select for Brewery Id
-                    </button>
-                    <li key={index}>{bre.name}</li>
-                  </section>
-                )
-              })}
-            </ul>
+            {brewerySelector ? (
+              <section className="reset">
+                <button
+                  className="resetButton"
+                  onClick={() => setBrewerySelector(false)}
+                >
+                  Reset List
+                </button>
+              </section>
+            ) : (
+              <ul>
+                {breweryList.map((bre, index) => {
+                  return (
+                    <section key={index} className="addBreweryList">
+                      <button
+                        value={bre.id}
+                        onClick={e => selectBreweriesId(e, bre)}
+                      >
+                        {bre.name}
+                      </button>
+                    </section>
+                  )
+                })}
+              </ul>
+            )}
           </section>
           <label>Beer Pic URL</label>
           <input
@@ -308,6 +319,17 @@ const AdminBeer = () => {
             <Dropzone onDrop={onDrop} accept={'image/*'} />
             <ImageList images={images} />
           </section>
+          <section className="addBreweryButtons">
+            <button className="addButton" onClick={addIt}>
+              Add
+            </button>
+            <button className="addButton" onClick={updateIt}>
+              Update
+            </button>
+            <button className="addButton" onClick={e => deleteit(e, beer)}>
+              Delete
+            </button>
+          </section>
         </form>
       </section>
       <h1 className="borderedTitle">Current Beers</h1>
@@ -317,9 +339,9 @@ const AdminBeer = () => {
             return (
               <section key={index} className="addBreweryList">
                 <button value={bee.id} onClick={() => selectIt(bee.id)}>
-                  Select for Update or Delete
+                  {bee.name}
                 </button>
-                <li key={index}>{bee.name}</li>
+                {/* <li key={index}>{bee.name}</li> */}
               </section>
             )
           })}

@@ -154,9 +154,9 @@ const AddStyle = () => {
             return (
               <section key={index} className="addBreweryList">
                 <button value={style.id} onClick={() => selectIt(style.id)}>
-                  Select for Update or Delete
+                  {style.style}
                 </button>
-                <li key={index}>{style.style}</li>
+                {/* <li key={index}>{style.style}</li> */}
               </section>
             )
           })}

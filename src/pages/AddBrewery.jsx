@@ -184,9 +184,9 @@ const AddBrewery = () => {
             return (
               <section key={index} className="addBreweryList">
                 <button value={bre.id} onClick={() => selectIt(bre.id)}>
-                  Select for Update or Delete
+                  {bre.name}
                 </button>
-                <li key={index}>{bre.name}</li>
+                {/* <li key={index}>{bre.name}</li> */}
               </section>
             )
           })}
