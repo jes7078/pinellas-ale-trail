@@ -8,6 +8,7 @@ const Breweries = props => {
   const [beerNumber, setBeerNumber] = useState(0)
   const [beer, setBeer] = useState([])
   const [needToRedirect, setNeedToRedirect] = useState(false)
+  const [imageUrl, setImageUrl] = useState()
   const [nullStyle] = useState([
     {
       name: 'There are no local beers',
@@ -18,6 +19,11 @@ const Breweries = props => {
         'https://previews.123rf.com/images/valeo5/valeo51605/valeo5160500533/56790169-no-beer-sign-isolated-on-white-background-no-alcohol-allowed-sign-.jpg',
     },
   ])
+
+  const secStyle = {
+    backgroundImage: `url(${localStyles[beerNumber] &&
+      localStyles[beerNumber].beerURL})`,
+  }
 
   // TIMER FOR RANDOM FEATURED BEER
   useEffect(() => {
@@ -75,11 +81,23 @@ const Breweries = props => {
           <h1 id="featuredBeerTitle">Random Featured Beer</h1>
 
           <section className="featuredSection">
-            <img
+            <section
+              id="backcontainer"
+              styles={{
+                backgroundImage: `url(${imageUrl})`,
+              }}
+            >
+              <section
+                id="backcontainer"
+                style={secStyle && secStyle}
+              ></section>
+              {/* <img src={imageUrl} /> */}
+            </section>
+            {/* <img
               id="breweryBeerPicture"
               alt="brewery beer"
               src={localStyles[beerNumber] && localStyles[beerNumber].beerURL}
-            />
+            /> */}
             <section className="breweryPagePictureFooter">
               <h1>
                 Name: {localStyles[beerNumber] && localStyles[beerNumber].name}
