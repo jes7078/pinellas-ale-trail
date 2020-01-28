@@ -299,6 +299,7 @@ body {
   margin: auto;
   margin-top: 1rem;
   image-orientation: from-image;
+  -webkit-image-orientation: from-image;
 }
 
 @media screen and (min-width: 1550px) {
@@ -490,6 +491,7 @@ body {
   object-fit: contain;
   margin: auto;
   image-orientation: from-image;
+  -webkit-image-orientation: from-image;
 }
 
 @media screen and (min-width: 800px) {
