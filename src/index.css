@@ -31,8 +31,12 @@ body {
 	-webkit-background-clip: text;
 	text-align: center;
 	background-position: center;
-	width: 80%;
+	width: 100%;
 	margin-top: 0.5rem;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 #menuTitle {
